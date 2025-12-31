@@ -3,71 +3,50 @@ export default function Footer() {
     <footer className="bg-card border-t border-border">
       <div className="section-padding">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
-          <div className="space-y-4">
-            <h4 className="font-bold text-lg text-primary">SWISSTOP</h4>
-            <p className="text-sm text-muted-foreground">
-              Professional-grade tools engineered for precision and longevity.
+          <div className="space-y-2 sm:space-y-4">
+            <h4 className="font-bold text-sm sm:text-base text-primary">4-IN-1 TOOL</h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              Professional-grade performance in a glovebox-sized package.
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h5 className="font-bold text-sm">Product</h5>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-2 sm:space-y-4">
+            <h5 className="font-bold text-xs sm:text-sm">Navigation</h5>
+            <ul className="space-y-1 text-xs sm:text-sm">
               <li>
                 <a href="#benefits" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#specs" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Specifications
+                  Why It Works
                 </a>
               </li>
               <li>
                 <a href="#proof" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Reviews
+                  The Proof
+                </a>
+              </li>
+              <li>
+                <a href="#specs" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Specs
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h5 className="font-bold text-sm">Support</h5>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-2 sm:space-y-4">
+            <h5 className="font-bold text-xs sm:text-sm">Support</h5>
+            <ul className="space-y-1 text-xs sm:text-sm">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Help Center
+                  Help
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact Us
+                  Contact
                 </a>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                   Warranty
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h5 className="font-bold text-sm">Legal</h5>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Refund Policy
                 </a>
               </li>
             </ul>
