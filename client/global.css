@@ -117,4 +117,42 @@
     overflow-x: auto;
     white-space: pre;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .cta-button {
+    @apply px-6 py-3 rounded font-semibold text-sm md:text-base transition-all duration-200 hover:shadow-lg;
+  }
+
+  .cta-primary {
+    @apply cta-button bg-primary text-primary-foreground hover:opacity-90;
+  }
+
+  .cta-secondary {
+    @apply cta-button bg-secondary text-secondary-foreground hover:opacity-90;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20 px-4 md:px-6;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
 }
