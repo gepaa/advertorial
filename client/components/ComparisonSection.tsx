@@ -1,12 +1,24 @@
-const comparisonFeatures = [
-  { feature: "Sealed Gasket System", cheap: false, premium: false, ours: true },
-  { feature: "30 Air Watts Power", cheap: false, premium: true, ours: true },
-  { feature: "H11 HEPA Filter", cheap: false, premium: false, ours: true },
-  { feature: "USB-C Charging", cheap: false, premium: true, ours: true },
-  { feature: "Polycarbonate Build", cheap: false, premium: false, ours: true },
-  { feature: "Lifetime Warranty", cheap: false, premium: false, ours: true },
-  { feature: "Lifetime Support", cheap: false, premium: false, ours: true },
-  { feature: "Portable Design", cheap: true, premium: true, ours: true },
+const testResults = [
+  {
+    test: "Sand Test - First Pass Clearance",
+    description: "Pour beach sand onto carpeting, run vacuum once",
+    result: "91% cleared",
+  },
+  {
+    test: "Sand Test - Second Pass",
+    description: "Run vacuum across same area again",
+    result: "98% cleared",
+  },
+  {
+    test: "Smoke Chamber Test",
+    description: "Theatrical smoke pumped into intake",
+    result: "Zero visible emissions",
+  },
+  {
+    test: "Filter Contamination Test",
+    description: "Visual inspection after full car interior cleaning",
+    result: "Captured dark particles (99.5%)",
+  },
 ];
 
 function CheckIcon() {
