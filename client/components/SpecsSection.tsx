@@ -9,27 +9,36 @@ const specs: Spec[] = [
   {
     icon: "🔋",
     label: "USB-C Charging",
-    value: "20 Minutes",
-    description: "Full charge in just 20 minutes. Fast-charging technology built for convenience."
+    value: "2.5 Hours",
+    description: "Charges using the same cable as your phone or laptop"
   },
   {
     icon: "⚡",
-    label: "Power Rating",
+    label: "Air Watts Power",
     value: "30 AW",
-    description: "Professional-grade suction. 3x more powerful than standard alternatives."
+    description: "Verified cleaning power comparable to early Dyson cordless"
   },
   {
     icon: "🌊",
-    label: "Filtration",
-    value: "H11 HEPA",
-    description: "Captures 99.97% of particles. Advanced sealed-system filter design."
+    label: "H11 Filtration",
+    value: "99.5% Capture",
+    description: "Sealed-gasket system with zero visible emissions"
   },
   {
     icon: "🛡️",
-    label: "Material",
-    value: "Polycarbonate",
-    description: "Military-grade durability. Engineered to last a lifetime."
+    label: "Impact Resistant",
+    value: "4-foot Drop",
+    description: "Polycarbonate body rated for concrete drops"
   }
+];
+
+const performanceSpecs = [
+  { label: "Runtime", value: "15 minutes (high-torque mode)" },
+  { label: "Weight", value: "0.8 pounds" },
+  { label: "Length", value: "11 inches" },
+  { label: "Noise Level", value: "Acoustically dampened" },
+  { label: "Filter Type", value: "Washable (no subscription cost)" },
+  { label: "Warranty", value: "Lifetime" },
 ];
 
 export default function SpecsSection() {
