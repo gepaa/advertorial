@@ -8,45 +8,45 @@ interface Reason {
 const reasons: Reason[] = [
   {
     number: 1,
-    title: "Unmatched Durability",
-    description: "Built with premium materials and sealed gasket technology, this tool is engineered to last a lifetime. The polycarbonate construction withstands daily heavy use without degradation.",
-    highlight: "Sealed Gasket System"
+    title: "The Invisible Enemy: Cheap Vacuums Are 'PM2.5 Cannons'",
+    description: "When a vacuum lacks a sealed filtration system, it becomes a particulate redistribution device rather than a cleaning tool. The motor sucks in visible debris, but also inhales fine particulate matter measuring 2.5 microns or smaller—pollen, dust mite feces, mold spores, and allergen silt. They get sucked through the motor housing and blasted out the exhaust vent directly into your breathing zone. This is 'Blowback.' For parents cleaning car seats where kids' faces rest, this isn't just inefficient—it's actively contaminating the space you're trying to purify.",
+    highlight: "PM2.5 Blowback"
   },
   {
     number: 2,
-    title: "30 Air Watts of Power",
-    description: "Professional-grade suction power that outperforms competitors by 3x. Delivers consistent performance for deep cleaning and detailing that rivals commercial equipment.",
-    highlight: "30 AW Power Rating"
+    title: "H11 HEPA-Grade Filtration: Laboratory-Standard Protection",
+    description: "The solution required three specific engineering elements that consumer vacuums abandoned in favor of cheaper production costs: H11 HEPA-Grade Filtration captures 99.5% of particles down to 0.3 microns, Sealed-Gasket Construction prevents any air bypass around the filter, and Cyclonic Pre-Separation drops heavy debris before it reaches the filter, preventing premature clogging.",
+    highlight: "99.5% Particle Capture"
   },
   {
     number: 3,
-    title: "H11 HEPA Filtration",
-    description: "Advanced multi-stage filtration system captures 99.97% of particles, protecting both your workspace and the environment. Designed for sensitive environments.",
-    highlight: "H11 Certified Filter"
+    title: "Why 'Air Watts' Matter More Than Fake Suction Claims",
+    description: "Walk into any big-box store and you'll see handhelds screaming about their '12,000Pa!' or '15,000Pa!' suction power. Here's what they're not telling you: Pascals measure sealed suction—the static pressure when the inlet is completely blocked. It's useless for actual cleaning. The honest metric is Air Watts (AW), which measures both suction pressure and airflow volume. It's the difference between a fire hose (high flow, real cleaning power) and a syringe (high pressure, zero practical use).",
+    highlight: "30 Verified Air Watts"
   },
   {
     number: 4,
-    title: "Universal Compatibility",
-    description: "Works seamlessly with all standard fittings and adapters. Connect to any compatible cleaning system. One tool for all your needs.",
-    highlight: "Works Anywhere"
+    title: "The 4-in-1 Functionality: One Tool Replaces Everything",
+    description: "Vacuum—reaches between seat rails and into door bins. Blower—clears HVAC vents, detaches dust from piano black trim, cleans PC keyboards and camera sensors. Inflator—pool floats, air mattresses, beach balls, bicycle tires. Deflator/Pump—vacuum-sealing travel bags, compressing sleeping bags, extracting air from storage containers. One tool replaces a handheld vacuum ($30), monthly compressed air cans ($72/year), a portable air pump ($25), and professional car detailing visits ($80–$200 per visit).",
+    highlight: "Swiss Army Knife Versatility"
   },
   {
     number: 5,
-    title: "USB-C Fast Charging",
-    description: "Gone are the days of waiting hours for your tool to charge. Full battery in just 20 minutes with our advanced charging technology.",
-    highlight: "20-Minute Full Charge"
+    title: "The Sand Test: Professional-Grade Proof",
+    description: "Professional detailers use the Sand Test to separate functional tools from 'e-waste': Pour beach sand onto automotive carpeting and run the vacuum across it in a single pass. Cheap handhelds leave 40–60% behind. High-torque motors with proper suction lift 85–95%. This tool cleared 91% of sand on the first pass and 98% on the second—performance that rivals corded shop-vacs despite the cordless form factor.",
+    highlight: "91% Clearance (First Pass)"
   },
   {
     number: 6,
-    title: "Customer Love Is Real",
-    description: "Over 2 million satisfied customers worldwide. Join professionals and enthusiasts who have made this their go-to solution. 5-star rated across all platforms.",
-    highlight: "2M+ Happy Customers"
+    title: "The Smoke Chamber Test: Sealed Filtration Proof",
+    description: "Pump theatrical smoke into the vacuum's intake while running. If the exhaust is clear, filtration is sealed. If smoke pours out, you're breathing whatever you just 'cleaned.' The H11 sealed-gasket system passed this test with zero visible smoke emission—a result less than 15% of consumer handhelds achieve. After vacuuming a full car interior, the H11 filter turns from white to dark grey, capturing the 'invisible enemy' that would otherwise recirculate into your breathing space.",
+    highlight: "Zero Visible Emissions"
   },
   {
     number: 7,
-    title: "30% Off for Early Adopters",
-    description: "Secure your unit today with an exclusive early-bird discount. This offer is limited and won't last long. Premium bundle included.",
-    highlight: "Limited Time Offer"
+    title: "The Glovebox-Ready Sanity Restoration Device",
+    description: "Measures 11 inches long and weighs 0.8 pounds—roughly the size of a Contigo water bottle. Charges via USB-C in 2.5 hours using the same cable that powers your phone or laptop. The polycarbonate body is impact-resistant, rated to survive a 4-foot drop onto concrete. The motor is acoustically dampened to reduce the high-pitched whine common in budget units. The H11 filter is washable, so there's no recurring filter subscription cost—just rinse it every 3-4 weeks and reinstall.",
+    highlight: "Fits in Your Glovebox"
   }
 ];
 
