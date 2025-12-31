@@ -1,89 +1,72 @@
-const ugcVideos = [
-  {
-    id: 1,
-    title: "The Sand Test",
-    description: "Watch as our tool handles extreme conditions with ease",
-    duration: "0:45",
-  },
-  {
-    id: 2,
-    title: "Deep Clean Test",
-    description: "Removing dirt from every crevice effortlessly",
-    duration: "0:38",
-  },
-  {
-    id: 3,
-    title: "Durability Test",
-    description: "12-month stress test proves longevity",
-    duration: "0:32",
-  },
-  {
-    id: 4,
-    title: "User Experience",
-    description: "Real users share their feedback and results",
-    duration: "0:42",
-  },
-];
-
 export default function SocialProofSection() {
   return (
     <section className="section-padding bg-card/50">
-      <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">See It In Action</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Watch real users demonstrate the power and precision of our tool
+      <div className="space-y-8 sm:space-y-12">
+        <div className="space-y-3 sm:space-y-4 px-4 sm:px-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">What Makes This Different</h2>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            When a company only advertises Pascals, they're hiding their airflow weakness. When they specify Air Watts, they're confident you'll test it and discover the truth about performance.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {ugcVideos.map((video) => (
-            <div
-              key={video.id}
-              className="group relative bg-background rounded-lg overflow-hidden aspect-video flex items-center justify-center hover:shadow-lg transition-shadow"
-            >
-              <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/60 flex flex-col justify-end p-4">
-                <div className="space-y-2">
-                  <h3 className="font-bold text-white text-sm md:text-base">{video.title}</h3>
-                  <p className="text-xs md:text-sm text-gray-200">{video.description}</p>
-                </div>
-              </div>
-
-              <button className="absolute inset-0 flex items-center justify-center hover:bg-black/20 transition-colors group">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground group-hover:scale-110 transition-transform">
-                  <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </button>
-
-              <span className="absolute top-2 right-2 bg-black/70 px-2 py-1 rounded text-xs text-white font-mono">
-                {video.duration}
-              </span>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {[
+            {
+              icon: "🎯",
+              label: "Surgical Precision",
+              value: "Crevice nozzle fits where others can't",
+              detail: "Reaches between seat rails, door bins, and tight spaces"
+            },
+            {
+              icon: "🔒",
+              label: "H11 Sealed Gasket",
+              value: "Zero visible emissions in smoke chamber test",
+              detail: "Less than 15% of consumer handhelds achieve this"
+            },
+            {
+              icon: "⚡",
+              label: "30 Air Watts",
+              value: "Real power, honest metric",
+              detail: "Comparable to early Dyson cordless models"
+            },
+            {
+              icon: "💧",
+              label: "4-in-1 Functionality",
+              value: "One tool replaces four purchases",
+              detail: "Vacuum, blower, inflator, and pump combined"
+            },
+            {
+              icon: "🌍",
+              label: "Washable Filter",
+              value: "No subscription costs",
+              detail: "Rinse every 3-4 weeks, reuse indefinitely"
+            },
+            {
+              icon: "📦",
+              label: "Glovebox-Ready",
+              value: "11 inches, 0.8 pounds",
+              detail: "Fits alongside your spare tire for immediate deployment"
+            },
+          ].map((feature, index) => (
+            <div key={index} className="bg-background rounded-lg p-4 sm:p-6 space-y-2">
+              <div className="text-3xl sm:text-4xl">{feature.icon}</div>
+              <h4 className="font-bold text-sm sm:text-base">{feature.label}</h4>
+              <p className="text-xs sm:text-sm text-primary font-semibold">{feature.value}</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">{feature.detail}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold mb-2">What People Love About This Tool</h3>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: "⚡", label: "Speed", value: "10x faster than alternatives" },
-              { icon: "🎯", label: "Precision", value: "Professional-grade accuracy" },
-              { icon: "💪", label: "Power", value: "30 AW of consistent force" },
-              { icon: "🔒", label: "Durability", value: "Sealed systems last forever" },
-              { icon: "🌍", label: "Eco-Friendly", value: "H11 HEPA filtration" },
-              { icon: "⚙️", label: "Universal", value: "Works with all systems" },
-            ].map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-3">{feature.icon}</div>
-                <h4 className="font-bold mb-1">{feature.label}</h4>
-                <p className="text-sm text-muted-foreground">{feature.value}</p>
-              </div>
-            ))}
+        {/* Key Value Statement */}
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0 py-6 sm:py-8 border-y border-border">
+          <h3 className="text-lg sm:text-2xl font-bold">Why This Is Different From The Cheap Alternative</h3>
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            <p>
+              <span className="text-foreground font-semibold">Cheap vacuums are PM2.5 Cannons:</span> They redistribute the "invisible enemy" directly into your breathing zone. The motor sucks in debris, then blasts fine particulate matter (measuring 2.5 microns) out the exhaust vent—directly at your face. For parents cleaning car seats where kids' faces rest, this is actively contaminating the space you're trying to purify.
+            </p>
+            <p>
+              <span className="text-foreground font-semibold">This tool has H11 HEPA Sealed-Gasket protection:</span> Three engineering elements cheap vacuums abandoned in favor of cost-cutting: laboratory-standard H11 HEPA filtration (captures 99.5% of particles down to 0.3 microns), sealed-gasket construction (prevents any air bypass), and cyclonic pre-separation (drops heavy debris before it reaches the filter). The result: zero visible emissions in the smoke chamber test.
+            </p>
           </div>
         </div>
       </div>
