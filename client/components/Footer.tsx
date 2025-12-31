@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <footer className="bg-card border-t border-border">
-      <div className="section-padding container-max">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <div className="section-padding">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
           <div className="space-y-4">
             <h4 className="font-bold text-lg text-primary">SWISSTOP</h4>
             <p className="text-sm text-muted-foreground">
