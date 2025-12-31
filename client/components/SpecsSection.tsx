@@ -44,83 +44,54 @@ const performanceSpecs = [
 export default function SpecsSection() {
   return (
     <section id="specs" className="section-padding">
-      <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Technical Specifications</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <div className="space-y-8 sm:space-y-12">
+        {/* Header */}
+        <div className="space-y-3 sm:space-y-4 px-4 sm:px-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Technical Specifications</h2>
+          <p className="text-base sm:text-lg text-muted-foreground">
             Engineering excellence meets practical design
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Key Specs Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {specs.map((spec, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 space-y-4 hover:border-primary/50 transition-colors"
+              className="bg-card border border-border rounded-lg p-3 sm:p-4 space-y-2 sm:space-y-3 hover:border-primary/50 transition-colors"
             >
-              <div className="text-5xl">{spec.icon}</div>
+              <div className="text-3xl sm:text-4xl">{spec.icon}</div>
               <div>
-                <h3 className="font-bold text-lg mb-1">{spec.label}</h3>
-                <div className="text-2xl font-bold text-primary mb-2">{spec.value}</div>
-                <p className="text-sm text-muted-foreground">{spec.description}</p>
+                <h3 className="font-bold text-xs sm:text-sm mb-1">{spec.label}</h3>
+                <div className="text-lg sm:text-xl font-bold text-primary mb-2">{spec.value}</div>
+                <p className="text-xs sm:text-sm text-muted-foreground">{spec.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Additional Specs Table */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <h3 className="text-2xl font-bold mb-6">Complete Feature Set</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-3">
-              <h4 className="font-semibold text-primary mb-4">Performance</h4>
-              {[
-                { label: "Suction Power", value: "30 Air Watts" },
-                { label: "Air Speed", value: "Up to 120 mph" },
-                { label: "Noise Level", value: "< 65 dB" },
-                { label: "Battery Life", value: "8 Hours (per charge)" },
-              ].map((item, i) => (
-                <div key={i} className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">{item.label}</span>
-                  <span className="font-semibold text-primary">{item.value}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-3">
-              <h4 className="font-semibold text-secondary mb-4">Design & Build</h4>
-              {[
-                { label: "Weight", value: "2.4 lbs" },
-                { label: "Dimensions", value: "12\" x 4\" x 3\"" },
-                { label: "Material", value: "Polycarbonate + Sealed Gasket" },
-                { label: "Warranty", value: "Lifetime" },
-              ].map((item, i) => (
-                <div key={i} className="flex justify-between py-2 border-b border-border/50">
-                  <span className="text-muted-foreground">{item.label}</span>
-                  <span className="font-semibold text-secondary">{item.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Certifications */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <h3 className="text-2xl font-bold mb-6 text-center">Certifications & Standards</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              "✓ FDA Compliant",
-              "✓ ISO 9001 Certified",
-              "✓ RoHS Certified",
-              "✓ CE Marked",
-              "✓ FCC Approved",
-              "✓ H11 HEPA Certified"
-            ].map((cert, i) => (
-              <div key={i} className="flex items-center gap-2 text-sm">
-                <span className="text-secondary">{cert}</span>
+        {/* Performance Specs */}
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0 py-6 sm:py-8 border-y border-border">
+          <h3 className="text-lg sm:text-2xl font-bold">Complete Details</h3>
+          <div className="space-y-2">
+            {performanceSpecs.map((item, i) => (
+              <div key={i} className="flex justify-between items-start gap-4 py-2 border-b border-border/50 text-sm sm:text-base">
+                <span className="text-muted-foreground">{item.label}</span>
+                <span className="font-semibold text-primary text-right">{item.value}</span>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* The 60-Second Car Reset Story */}
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0">
+          <h3 className="text-lg sm:text-2xl font-bold">For Parents, This Is The 'Game Changer' Tool</h3>
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            The 60-second reset that transforms "kid chaos" into "socially acceptable" while you wait in the school pickup line. No extension cords. No dragging a shop-vac to the driveway. No breathing recirculated dust.
+          </p>
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+            For detailers, it's the "surgical strike" capability that handles precision cleaning without the friction of hauling out a corded rig. Fits perfectly in your glovebox for immediate deployment the moment you spot the Goldfish cracker graveyard.
+          </p>
         </div>
       </div>
     </section>
