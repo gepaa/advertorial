@@ -21,104 +21,70 @@ const testResults = [
   },
 ];
 
-function CheckIcon() {
-  return (
-    <svg className="w-6 h-6 text-secondary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-    </svg>
-  );
-}
-
-function XIcon() {
-  return (
-    <svg className="w-6 h-6 text-muted-foreground mx-auto opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  );
-}
-
 export default function ComparisonSection() {
   return (
     <section id="proof" className="section-padding">
-      <div className="container-max">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Over 2 Million People Upgraded</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See how we compare to cheap alternatives and premium competitors
+      <div className="space-y-8 sm:space-y-12">
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0">
+          <h2 className="text-2xl sm:text-4xl font-bold">Extraordinary Claims Require Empirical Evidence</h2>
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Professional detailers use two primary tests to separate functional tools from "e-waste". Here's how this tool performs:
           </p>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-border">
-                <th className="text-left py-4 px-4 text-sm font-semibold text-muted-foreground">Feature</th>
-                <th className="text-center py-4 px-4">
-                  <div className="text-sm font-semibold text-muted-foreground mb-1">Cheap Generic</div>
-                  <div className="text-xs text-muted-foreground">Low Quality</div>
-                </th>
-                <th className="text-center py-4 px-4">
-                  <div className="text-sm font-semibold text-muted-foreground mb-1">High-End Tech Brand</div>
-                  <div className="text-xs text-muted-foreground">Premium Price</div>
-                </th>
-                <th className="text-center py-4 px-4 bg-primary/10 rounded-t-lg">
-                  <div className="text-sm font-bold text-primary mb-1">Our 4-in-1 Tool</div>
-                  <div className="text-xs text-primary">Best Value</div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparisonFeatures.map((item, index) => (
-                <tr key={index} className="border-b border-border/50 hover:bg-card/50 transition-colors">
-                  <td className="py-4 px-4 text-sm font-medium">{item.feature}</td>
-                  <td className="py-4 px-4 text-center">
-                    {item.cheap ? <CheckIcon /> : <XIcon />}
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    {item.premium ? <CheckIcon /> : <XIcon />}
-                  </td>
-                  <td className="py-4 px-4 text-center bg-primary/5">
-                    {item.ours ? <CheckIcon /> : <XIcon />}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {/* Test Results Grid */}
+        <div className="space-y-4 sm:space-y-6">
+          {testResults.map((item, index) => (
+            <div key={index} className="bg-card border border-border rounded-lg p-4 sm:p-6 space-y-2">
+              <div className="flex items-start justify-between gap-3">
+                <div className="space-y-1 flex-1">
+                  <h3 className="font-bold text-sm sm:text-base">{item.test}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
+                </div>
+                <div className="text-right flex-shrink-0">
+                  <span className="inline-block px-2 sm:px-3 py-1 bg-secondary/20 border border-secondary text-secondary rounded text-xs sm:text-sm font-bold">
+                    {item.result}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border">
-          <h3 className="text-2xl font-bold mb-8 text-center">Customer Success Stories</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+        {/* The Marcus Chen Story */}
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0 py-6 sm:py-8 border-y border-border">
+          <h3 className="text-xl sm:text-2xl font-bold">How A Weekend Detailer Cracked The Code</h3>
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            <p>
+              A weekend auto detailer from Arizona named Marcus Chen maintained a showroom-quality Tesla Model 3 and spent hours learning professional techniques. But he had a problem: his allergies were getting progressively worse, and his doctor couldn't figure out why.
+            </p>
+            <p>
+              <span className="text-foreground font-semibold">The culprit? His "convenient" cordless handheld vacuum.</span>
+            </p>
+            <p>
+              Marcus realized that every time he cleaned his car's air vents—those narrow slats where conventional vacuum nozzles can't fit—he'd experience immediate sinus irritation. He started researching industrial filtration systems and discovered the truth about PM2.5 re-emission.
+            </p>
+            <p>
+              Marcus partnered with a manufacturer to create what he needed: a tool that would fit in a glovebox but perform like professional equipment. The result was a polycarbonate-bodied 4-in-1 device that weighed less than a water bottle but delivered what cheap vacuums never could—genuine capture, not just displacement.
+            </p>
+          </div>
+        </div>
+
+        {/* Value Proposition */}
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0">
+          <h3 className="text-xl sm:text-2xl font-bold">This Single Tool Replaces:</h3>
+          <div className="space-y-2">
             {[
-              {
-                name: "Sarah Mitchell",
-                role: "Professional Detailer",
-                quote: "This tool changed how I work. Faster, cleaner, and my clients notice the difference immediately.",
-              },
-              {
-                name: "James Rodriguez",
-                role: "Car Enthusiast",
-                quote: "Finally, a product that delivers on its promises. Worth every penny and then some.",
-              },
-              {
-                name: "Emma Chen",
-                role: "Restoration Expert",
-                quote: "Precision engineering at its finest. This is the standard I compare all others against.",
-              },
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-card rounded-lg p-6 space-y-4">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-secondary fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-muted-foreground italic">"{testimonial.quote}"</p>
-                <div>
-                  <p className="font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                </div>
+              "A handheld vacuum ($30)",
+              "Monthly compressed air cans ($72/year)",
+              "A portable air pump ($25)",
+              "Professional car detailing visits ($80–$200 per visit)"
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 text-sm sm:text-base text-muted-foreground">
+                <svg className="w-5 h-5 text-secondary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span>{item}</span>
               </div>
             ))}
           </div>
