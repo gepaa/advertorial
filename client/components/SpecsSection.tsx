@@ -43,13 +43,14 @@ const performanceSpecs = [
 
 export default function SpecsSection() {
   return (
-    <section id="specs" className="section-padding">
-      <div className="space-y-8 sm:space-y-12">
+    <section id="specs" className="section-padding bg-card/30">
+      <div className="space-y-8 sm:space-y-12 max-w-5xl mx-auto">
         {/* Header */}
-        <div className="space-y-3 sm:space-y-4 px-4 sm:px-0">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Technical Specifications</h2>
-          <p className="text-base sm:text-lg text-muted-foreground">
-            Engineering excellence meets practical design
+        <div className="text-center space-y-3 sm:space-y-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-primary">The Details</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Technical Specifications</h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            Engineering excellence meets practical design—built for professionals and everyday users
           </p>
         </div>
 
