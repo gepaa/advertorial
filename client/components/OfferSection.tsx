@@ -1,95 +1,130 @@
 export default function OfferSection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-card to-background">
-      <div className="space-y-6 sm:space-y-8 max-w-3xl mx-auto">
-        <div className="bg-card border border-primary/30 rounded-lg p-6 sm:p-8 space-y-6 sm:space-y-8">
-          {/* Offer Headline */}
-          <div className="text-center space-y-3 sm:space-y-4">
-            <div className="inline-block px-3 py-1 bg-primary/20 border border-primary rounded text-primary text-xs sm:text-sm font-semibold">
-              PRO BUNDLE
+    <section className="section-padding bg-gradient-to-b from-background to-card/50">
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+        {/* Main Offer Card */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Product Image */}
+          <div className="order-2 lg:order-1">
+            <div className="w-full bg-gradient-to-br from-primary to-primary/70 rounded-lg overflow-hidden p-8 sm:p-12 flex items-center justify-center aspect-square">
+              <div className="text-center text-primary-foreground w-full h-full flex items-center justify-center">
+                <svg className="w-24 h-24 sm:w-32 sm:h-32 mx-auto opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              Everything You Need
-            </h2>
+          </div>
+
+          {/* Offer Details */}
+          <div className="order-1 lg:order-2 space-y-6 sm:space-y-8">
+            {/* Highlight Box - Yellow/Golden */}
+            <div className="bg-yellow-100/30 border-2 border-yellow-400 rounded-lg p-4 sm:p-6 space-y-2 sm:space-y-3">
+              <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-yellow-700">
+                ⚡ Limited Time Offer
+              </p>
+              <p className="text-2xl sm:text-3xl font-bold text-foreground">
+                50% OFF Your First Purchase
+              </p>
+              <p className="text-sm sm:text-base text-muted-foreground">
+                Regular price: <span className="line-through">$199</span><br />
+                <span className="text-xl sm:text-2xl font-bold text-secondary">Today: $99.99</span>
+              </p>
+            </div>
+
+            {/* What's Included */}
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="font-bold text-lg sm:text-xl">What's Included:</h3>
+              <ul className="space-y-2 sm:space-y-3">
+                {[
+                  "Mini Vacuum Pro (4-in-1 multi-tool)",
+                  "H11 HEPA sealed-gasket filter",
+                  "Attachments: crevice nozzle, brush, inflator",
+                  "USB-C rapid charging cable",
+                  "Carrying case (glovebox-ready)",
+                  "30-day satisfaction guarantee"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3 text-sm sm:text-base">
+                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* CTA Button */}
+            <div className="space-y-3 sm:space-y-4 pt-2 sm:pt-4">
+              <button className="w-full cta-primary py-4 sm:py-5 text-lg sm:text-xl font-bold tracking-wide rounded-lg">
+                SECURE YOUR 50% DISCOUNT NOW
+              </button>
+              <p className="text-center text-xs sm:text-sm text-muted-foreground">
+                🔒 Secure checkout • 30-day satisfaction guarantee
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Urgency Section */}
+        <div className="bg-primary/10 border border-primary rounded-lg p-6 sm:p-8 space-y-4 sm:space-y-6 text-center">
+          <div className="space-y-2 sm:space-y-3">
+            <h3 className="text-xl sm:text-2xl font-bold">This Special Sale is Time-Sensitive</h3>
             <p className="text-sm sm:text-base text-muted-foreground">
-              Complete system with premium accessories included
+              In 48 hours this special offer will expire and the price will automatically revert back to retail.
             </p>
           </div>
 
-          {/* What's Included */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="font-bold text-base sm:text-lg">What's In The Pro Bundle:</h3>
-            <ul className="space-y-2 sm:space-y-3">
-              {[
-                "4-in-1 Multi-Tool (Vacuum/Blower/Inflator/Pump)",
-                "H11 HEPA Sealed-Gasket Filter (washable and reusable)",
-                "Crevice nozzle and brush attachment",
-                "USB-C rapid charging cable",
-                "30 Air Watts of verified cleaning power",
-                "Fade-free lithium-ion battery (15-minute high-torque runtime)",
-                "Hard-shell carrying case (glovebox-ready storage)",
-                "Spare H11 filter (6-month replacement cycle)",
-                "Pet brush attachment (agitates woven-in dog hair from upholstery)",
-                "Flexible extension hose (reaches deep trunk areas)"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3 text-sm sm:text-base">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Belief Statements */}
-          <div className="space-y-3 p-4 sm:p-6 bg-background rounded border border-border/50">
-            <h4 className="font-bold text-sm text-primary">Why You'll Love It:</h4>
-            <div className="space-y-2 text-xs sm:text-sm">
-              <p className="text-muted-foreground">
-                <span className="text-foreground font-semibold">✓</span> Quality tools should be accessible to everyone, not just professionals.
-              </p>
-              <p className="text-muted-foreground">
-                <span className="text-foreground font-semibold">✓</span> We stand behind our products with a lifetime warranty and free replacement guarantee.
-              </p>
-              <p className="text-muted-foreground">
-                <span className="text-foreground font-semibold">✓</span> Great design should be intuitive, beautiful, and fit in your glovebox.
-              </p>
+          {/* Countdown Timer */}
+          <div className="flex justify-center gap-6 sm:gap-8 py-4 sm:py-6">
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-primary">47</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">Hours</div>
+            </div>
+            <div className="text-4xl sm:text-5xl font-bold text-muted-foreground">:</div>
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-primary">58</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">Minutes</div>
+            </div>
+            <div className="text-4xl sm:text-5xl font-bold text-muted-foreground">:</div>
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl font-bold text-primary">47</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">Seconds</div>
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="space-y-2 sm:space-y-3 pt-2 sm:pt-4">
-            <button className="w-full cta-primary text-base sm:text-lg py-3 sm:py-4 font-bold tracking-wide">
-              SECURE YOUR PRO BUNDLE NOW
-            </button>
-            <p className="text-center text-xs text-muted-foreground">
-              🔒 Secure checkout • 30-day satisfaction guarantee
-            </p>
-          </div>
+          <a href="#" className="inline-block text-primary hover:text-primary/80 text-xs sm:text-sm font-semibold underline transition-colors">
+            Check availability in your area
+          </a>
+        </div>
 
-          {/* Trust Badges */}
-          <div className="flex justify-center items-center gap-3 sm:gap-4 text-xs text-muted-foreground flex-wrap">
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="hidden sm:inline">Verified Secure</span>
-              <span className="sm:hidden">Secure</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-              <span>5-Star Rated</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-              </svg>
-              <span className="hidden sm:inline">30-Day Guarantee</span>
-              <span className="sm:hidden">30-Day Guarantee</span>
-            </div>
+        {/* Trust Section */}
+        <div className="bg-card border border-border rounded-lg p-6 sm:p-8 space-y-4 sm:space-y-6">
+          <h3 className="text-lg sm:text-xl font-bold text-center">Why You Can Buy with Confidence</h3>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            {[
+              {
+                icon: "🛡️",
+                title: "Risk-Free Guarantee",
+                text: "Try it for 30 days. If you're not satisfied, get a full refund—no questions asked."
+              },
+              {
+                icon: "⭐",
+                title: "Trusted by Pros",
+                text: "Professional detailers and cleaning experts recommend us. Thousands of 5-star reviews."
+              },
+              {
+                icon: "🔒",
+                title: "Secure Checkout",
+                text: "Your payment is encrypted and secure. We never store your card information."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="text-center space-y-2">
+                <div className="text-3xl">{item.icon}</div>
+                <h4 className="font-bold text-foreground">{item.title}</h4>
+                <p className="text-sm text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
