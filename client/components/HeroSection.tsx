@@ -32,10 +32,6 @@ export default function HeroSection() {
                 That's when I realized: <span className="text-foreground font-semibold">my car had become a mobile petri dish.</span>
               </p>
             </div>
-
-            <button className="w-full sm:w-auto cta-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold">
-              CONTINUE READING
-            </button>
           </div>
 
           {/* Right Column - Image & Featured Benefits */}
