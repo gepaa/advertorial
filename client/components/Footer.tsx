@@ -4,8 +4,8 @@ export default function Footer() {
       <div className="section-padding">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
           <div className="space-y-2 sm:space-y-4">
-            <h4 className="font-bold text-sm sm:text-base text-primary">4-IN-1 TOOL</h4>
-            <p className="text-xs sm:text-sm text-muted-foreground">
+            <h4 className="font-bold text-sm sm:text-base">MINI VACUUM PRO</h4>
+            <p className="text-xs sm:text-sm text-primary-foreground/80">
               Professional-grade performance in a glovebox-sized package.
             </p>
           </div>
