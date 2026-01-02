@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-primary text-primary-foreground">
       <div className="section-padding">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
           <div className="space-y-2 sm:space-y-4">
