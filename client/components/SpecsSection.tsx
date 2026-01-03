@@ -93,7 +93,7 @@ export default function SpecsSection() {
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             For detailing enthusiasts and anyone who values clean air in tight spaces, this is the "surgical strike" tool that finally fits the way you actually work. It reaches where shop-vacs can't. It replaces expensive compressed air. And it proves its filtration performance every single time you see the filter turn grey.
           </p>
-          <div className="bg-primary/10 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-2 sm:space-y-3 mt-6 sm:mt-8">
+          <div className="bg-blue-50 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-2 sm:space-y-3 mt-6 sm:mt-8">
             <h4 className="text-xl sm:text-2xl font-bold text-primary">TURBINEPRO 4-IN-1</h4>
             <p className="text-sm sm:text-base text-muted-foreground">
               Professional-grade air quality in a glovebox-sized package.
