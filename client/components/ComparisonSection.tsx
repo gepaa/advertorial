@@ -31,7 +31,7 @@ export default function ComparisonSection() {
         </div>
 
         {/* Comparison Table */}
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto bg-gray-50 rounded-lg border border-gray-200 p-4 sm:p-6">
           <div className="grid grid-cols-3 gap-4 sm:gap-6 min-w-full">
             {/* Header Row */}
             <div className="space-y-6 sm:space-y-8">
