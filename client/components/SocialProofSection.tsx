@@ -91,7 +91,7 @@ export default function SocialProofSection() {
         </div>
 
         {/* Key Results Summary */}
-        <div className="bg-primary/10 border border-primary rounded-lg p-8 sm:p-12 space-y-6">
+        <div className="bg-blue-50 border border-primary rounded-lg p-8 sm:p-12 space-y-6">
           <h3 className="text-2xl sm:text-3xl font-bold">By The Numbers</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
             {[

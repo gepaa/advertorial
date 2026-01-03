@@ -98,7 +98,7 @@ export default function ComparisonSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-primary/10 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-3 sm:space-y-4">
+        <div className="bg-blue-50 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-3 sm:space-y-4">
           <p className="text-sm sm:text-base text-muted-foreground">
             Ready to experience real filtration?
           </p>

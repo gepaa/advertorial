@@ -18,7 +18,7 @@ export default function OfferSection() {
           {/* Offer Details */}
           <div className="order-1 lg:order-2 space-y-6 sm:space-y-8">
             {/* Highlight Box - Yellow/Golden */}
-            <div className="bg-yellow-100/30 border-2 border-yellow-400 rounded-lg p-4 sm:p-6 space-y-2 sm:space-y-3">
+            <div className="bg-yellow-50 border-2 border-yellow-300 rounded-lg p-4 sm:p-6 space-y-2 sm:space-y-3">
               <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-yellow-700">
                 ⚡ Limited Time Offer
               </p>
@@ -66,7 +66,7 @@ export default function OfferSection() {
         </div>
 
         {/* Urgency Section */}
-        <div className="bg-primary/10 border border-primary rounded-lg p-6 sm:p-8 space-y-4 sm:space-y-6 text-center">
+        <div className="bg-blue-50 border border-primary rounded-lg p-6 sm:p-8 space-y-4 sm:space-y-6 text-center">
           <div className="space-y-2 sm:space-y-3">
             <h3 className="text-xl sm:text-2xl font-bold">This Special Sale is Time-Sensitive</h3>
             <p className="text-sm sm:text-base text-muted-foreground">
