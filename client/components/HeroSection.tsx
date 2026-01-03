@@ -1,8 +1,6 @@
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="absolute inset-x-0 top-16 h-96 bg-gradient-to-b from-blue-50 via-transparent to-transparent pointer-events-none"></div>
-
       <div className="section-padding">
         {/* Author and Date */}
         <div className="flex items-center gap-3 mb-6 sm:mb-8">
