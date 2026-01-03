@@ -43,7 +43,7 @@ const performanceSpecs = [
 
 export default function SpecsSection() {
   return (
-    <section id="specs" className="section-padding bg-card/30">
+    <section id="specs" className="section-padding bg-white">
       <div className="space-y-8 sm:space-y-12 max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-3 sm:space-y-4">

@@ -17,7 +17,7 @@ const features: ComparisonFeature[] = [
 
 export default function ComparisonSection() {
   return (
-    <section id="proof" className="section-padding bg-card/50">
+    <section id="proof" className="section-padding bg-white">
       <div className="space-y-8 sm:space-y-12 max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="text-center space-y-3 sm:space-y-4">

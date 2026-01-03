@@ -24,7 +24,7 @@ export default function SocialProofSection() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-b from-background to-card/30">
+    <section className="section-padding bg-white">
       <div className="space-y-12 sm:space-y-16">
         {/* Section Header */}
         <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto">

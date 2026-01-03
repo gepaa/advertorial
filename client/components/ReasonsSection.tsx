@@ -32,7 +32,7 @@ const discoveries: Discovery[] = [
 
 export default function ReasonsSection() {
   return (
-    <section id="benefits" className="section-padding bg-gradient-to-b from-background to-card/30">
+    <section id="benefits" className="section-padding bg-white">
       <div className="space-y-16 sm:space-y-20">
         {/* Section Header */}
         <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-8 sm:mb-12">

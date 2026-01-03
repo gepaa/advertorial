@@ -1,6 +1,6 @@
 export default function OfferSection() {
   return (
-    <section className="section-padding bg-gradient-to-b from-background to-card/50">
+    <section className="section-padding bg-white">
       <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
         {/* Main Offer Card */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
