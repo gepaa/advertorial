@@ -75,7 +75,7 @@ export default function ReasonsSection() {
 
                   {discovery.highlight && (
                     <div className="pt-2">
-                      <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-primary/10 border border-primary rounded text-primary font-bold text-sm sm:text-base">
+                      <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-blue-50 border border-primary rounded text-primary font-bold text-sm sm:text-base">
                         {discovery.highlight}
                       </div>
                     </div>
