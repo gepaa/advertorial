@@ -59,7 +59,7 @@ export default function SpecsSection() {
           {specs.map((spec, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-3 sm:p-4 space-y-2 sm:space-y-3 hover:border-primary/50 transition-colors"
+              className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 space-y-2 sm:space-y-3 hover:border-primary/50 transition-colors"
             >
               <div className="text-3xl sm:text-4xl">{spec.icon}</div>
               <div>
@@ -72,11 +72,11 @@ export default function SpecsSection() {
         </div>
 
         {/* Performance Specs */}
-        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0 py-6 sm:py-8 border-y border-border">
+        <div className="space-y-4 sm:space-y-6 px-4 sm:px-0 py-6 sm:py-8 border-y border-gray-200">
           <h3 className="text-lg sm:text-2xl font-bold">Complete Details</h3>
           <div className="space-y-2">
             {performanceSpecs.map((item, i) => (
-              <div key={i} className="flex justify-between items-start gap-4 py-2 border-b border-border/50 text-sm sm:text-base">
+              <div key={i} className="flex justify-between items-start gap-4 py-2 border-b border-gray-200 text-sm sm:text-base">
                 <span className="text-muted-foreground">{item.label}</span>
                 <span className="font-semibold text-primary text-right">{item.value}</span>
               </div>
