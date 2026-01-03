@@ -60,7 +60,7 @@ export default function SocialProofSection() {
           <h3 className="text-2xl sm:text-3xl font-bold">Customer Stories</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card rounded-lg p-6 sm:p-8 space-y-4 border border-border/50">
+              <div key={index} className="bg-white rounded-lg p-6 sm:p-8 space-y-4 border border-gray-200">
                 {/* Stars */}
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -95,10 +95,10 @@ export default function SocialProofSection() {
           <h3 className="text-2xl sm:text-3xl font-bold">By The Numbers</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
             {[
-              { number: "64,000+", label: "Happy Customers" },
-              { number: "91%", label: "Sand Clearance" },
-              { number: "99.5%", label: "Particle Filtration" },
-              { number: "4-in-1", label: "Multi-Functions" }
+              { number: "64,000+", label: "Satisfied Customers" },
+              { number: "91%", label: "Sand Clearance Rate" },
+              { number: "99.5%", label: "Particle Capture Efficiency" },
+              { number: "4-in-1", label: "Functionality" }
             ].map((stat, idx) => (
               <div key={idx} className="space-y-2">
                 <div className="text-2xl sm:text-4xl font-bold text-primary">{stat.number}</div>
@@ -138,7 +138,7 @@ export default function SocialProofSection() {
                 description: "Try it risk-free. If you're not satisfied with the air quality improvement, return it for a full refund."
               }
             ].map((benefit, idx) => (
-              <div key={idx} className="bg-card rounded-lg p-6 border border-border/50 space-y-2">
+              <div key={idx} className="bg-white rounded-lg p-6 border border-gray-200 space-y-2">
                 <h4 className="font-bold text-lg">{benefit.title}</h4>
                 <p className="text-sm text-muted-foreground">{benefit.description}</p>
               </div>
