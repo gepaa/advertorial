@@ -26,21 +26,21 @@ export default function OfferSection() {
                 50% OFF Your First Purchase
               </p>
               <p className="text-sm sm:text-base text-muted-foreground">
-                Regular price: <span className="line-through">$199</span><br />
-                <span className="text-xl sm:text-2xl font-bold text-secondary">Today: $99.99</span>
+                Regular Price: <span className="line-through">$99.99</span><br />
+                <span className="text-xl sm:text-2xl font-bold text-secondary">Today Only: $49.99</span>
               </p>
             </div>
 
             {/* What's Included */}
             <div className="space-y-3 sm:space-y-4">
-              <h3 className="font-bold text-lg sm:text-xl">What's Included:</h3>
+              <h3 className="font-bold text-lg sm:text-xl">What's Included in the Pro Bundle:</h3>
               <ul className="space-y-2 sm:space-y-3">
                 {[
-                  "Mini Vacuum Pro (4-in-1 multi-tool)",
-                  "H11 HEPA sealed-gasket filter",
-                  "Attachments: crevice nozzle, brush, inflator",
+                  "TurbinePro 4-in-1 Multi-Tool (Vacuum/Blower/Inflator/Pump)",
+                  "H11 HEPA sealed-gasket filter (washable & reusable)",
+                  "Complete attachment set: crevice nozzle, brush head, inflator nozzle",
                   "USB-C rapid charging cable",
-                  "Carrying case (glovebox-ready)",
+                  "Hard-shell carrying case (glovebox-ready storage)",
                   "30-day satisfaction guarantee"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-sm sm:text-base">
@@ -56,10 +56,10 @@ export default function OfferSection() {
             {/* CTA Button */}
             <div className="space-y-3 sm:space-y-4 pt-2 sm:pt-4">
               <button className="w-full cta-primary py-4 sm:py-5 text-lg sm:text-xl font-bold tracking-wide rounded-lg">
-                SECURE YOUR 50% DISCOUNT NOW
+                SECURE YOUR 50% DISCOUNT NOW →
               </button>
               <p className="text-center text-xs sm:text-sm text-muted-foreground">
-                🔒 Secure checkout • 30-day satisfaction guarantee
+                🔒 Secure checkout - Risk-free 30-day guarantee
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function OfferSection() {
           <div className="space-y-2 sm:space-y-3">
             <h3 className="text-xl sm:text-2xl font-bold">This Special Sale is Time-Sensitive</h3>
             <p className="text-sm sm:text-base text-muted-foreground">
-              In 48 hours this special offer will expire and the price will automatically revert back to retail.
+              Once this promotional period ends, pricing returns to full retail.
             </p>
           </div>
 
@@ -78,17 +78,17 @@ export default function OfferSection() {
           <div className="flex justify-center gap-6 sm:gap-8 py-4 sm:py-6">
             <div className="text-center">
               <div className="text-4xl sm:text-5xl font-bold text-primary">47</div>
-              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">Hours</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">HOURS</div>
             </div>
             <div className="text-4xl sm:text-5xl font-bold text-muted-foreground">:</div>
             <div className="text-center">
               <div className="text-4xl sm:text-5xl font-bold text-primary">58</div>
-              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">Minutes</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">MINUTES</div>
             </div>
             <div className="text-4xl sm:text-5xl font-bold text-muted-foreground">:</div>
             <div className="text-center">
-              <div className="text-4xl sm:text-5xl font-bold text-primary">47</div>
-              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">Seconds</div>
+              <div className="text-4xl sm:text-5xl font-bold text-primary">32</div>
+              <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">SECONDS</div>
             </div>
           </div>
 
@@ -100,23 +100,23 @@ export default function OfferSection() {
         {/* Trust Section */}
         <div className="bg-card border border-border rounded-lg p-6 sm:p-8 space-y-4 sm:space-y-6">
           <h3 className="text-lg sm:text-xl font-bold text-center">Why You Can Buy with Confidence</h3>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 icon: "🛡️",
-                title: "Risk-Free Guarantee",
-                text: "Try it for 30 days. If you're not satisfied, get a full refund—no questions asked."
+                title: "Risk-Free 30-Day Guarantee",
+                text: "Test it in your car, at your desk, in your home. If the air quality improvement isn't noticeable, return it for a complete refund—no questions asked."
               },
               {
                 icon: "⭐",
-                title: "Trusted by Pros",
-                text: "Professional detailers and cleaning experts recommend us. Thousands of 5-star reviews."
+                title: "Trusted by Professionals",
+                text: "Auto detailers, cleaning experts, and health-conscious families rely on TurbinePro. Thousands of verified 5-star reviews."
               },
               {
                 icon: "🔒",
-                title: "Secure Checkout",
-                text: "Your payment is encrypted and secure. We never store your card information."
+                title: "Secure Encrypted Checkout",
+                text: "Your payment information is fully encrypted. We never store credit card data on our servers."
               }
             ].map((item, idx) => (
               <div key={idx} className="text-center space-y-2">
