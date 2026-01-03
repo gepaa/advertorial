@@ -55,7 +55,7 @@ export default function ComparisonSection() {
                 <p className="text-xs sm:text-sm opacity-90 mt-1">Professional Grade</p>
               </div>
               {features.map((item, idx) => (
-                <div key={idx} className="py-3 sm:py-4 border-b border-border/50 flex justify-center">
+                <div key={idx} className="py-3 sm:py-4 border-b border-gray-200 flex justify-center">
                   {item.turbinePro ? (
                     <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -71,7 +71,7 @@ export default function ComparisonSection() {
 
             {/* Budget Vacuum Column */}
             <div className="space-y-6 sm:space-y-8">
-              <div className="bg-muted/50 rounded-lg p-4 sm:p-6 text-center">
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 text-center">
                 <div className="flex justify-center mb-2">
                   <svg className="w-12 h-12 sm:w-16 sm:h-16 text-muted-foreground opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -81,7 +81,7 @@ export default function ComparisonSection() {
                 <p className="text-xs sm:text-sm text-muted-foreground opacity-70 mt-1">Discount Alternative</p>
               </div>
               {features.map((item, idx) => (
-                <div key={idx} className="py-3 sm:py-4 border-b border-border/50 flex justify-center">
+                <div key={idx} className="py-3 sm:py-4 border-b border-gray-200 flex justify-center">
                   {item.budgetVacuum ? (
                     <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
