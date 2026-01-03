@@ -1,18 +1,18 @@
 interface ComparisonFeature {
   feature: string;
-  miniVacuum: boolean;
+  turbinePro: boolean;
   budgetVacuum: boolean;
 }
 
 const features: ComparisonFeature[] = [
-  { feature: "H11 HEPA sealed filtration", miniVacuum: true, budgetVacuum: false },
-  { feature: "30 verified air watts", miniVacuum: true, budgetVacuum: false },
-  { feature: "4-in-1 multi-functionality", miniVacuum: true, budgetVacuum: false },
-  { feature: "Glovebox-ready size", miniVacuum: true, budgetVacuum: false },
-  { feature: "Washable filter (no recurring cost)", miniVacuum: true, budgetVacuum: false },
-  { feature: "Cordless operation", miniVacuum: true, budgetVacuum: false },
-  { feature: "Clear exhaust (smoke test passed)", miniVacuum: true, budgetVacuum: false },
-  { feature: "91% sand clearance (first pass)", miniVacuum: true, budgetVacuum: false },
+  { feature: "H11 HEPA sealed-gasket filtration", turbinePro: true, budgetVacuum: false },
+  { feature: "30 verified Air Watts", turbinePro: true, budgetVacuum: false },
+  { feature: "4-in-1 multi-functionality", turbinePro: true, budgetVacuum: false },
+  { feature: "Compact glovebox-ready design", turbinePro: true, budgetVacuum: false },
+  { feature: "Washable filter (no recurring cost)", turbinePro: true, budgetVacuum: false },
+  { feature: "Cordless USB-C charging", turbinePro: true, budgetVacuum: true },
+  { feature: "Clear exhaust (smoke test verified)", turbinePro: true, budgetVacuum: false },
+  { feature: "91% sand clearance (first pass)", turbinePro: true, budgetVacuum: false },
 ];
 
 export default function ComparisonSection() {
@@ -23,10 +23,10 @@ export default function ComparisonSection() {
         <div className="text-center space-y-3 sm:space-y-4">
           <p className="text-xs font-bold uppercase tracking-widest text-primary">The Proof</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            How Mini Vacuum Pro Differs From Cheap Alternatives
+            How TurbinePro 4-in-1 Differs From Cheap Alternatives
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
-            Professional-grade specs vs. budget vacuum compromises
+            Professional-grade engineering vs. budget vacuum compromises
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function ComparisonSection() {
               ))}
             </div>
 
-            {/* Mini Vacuum Pro Column */}
+            {/* TurbinePro 4-in-1 Column */}
             <div className="space-y-6 sm:space-y-8">
               <div className="bg-primary text-primary-foreground rounded-lg p-4 sm:p-6 text-center">
                 <div className="flex justify-center mb-2">
@@ -51,12 +51,12 @@ export default function ComparisonSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-base sm:text-lg">Mini Vacuum Pro</h3>
+                <h3 className="font-bold text-base sm:text-lg">TurbinePro 4-in-1</h3>
                 <p className="text-xs sm:text-sm opacity-90 mt-1">Professional Grade</p>
               </div>
               {features.map((item, idx) => (
                 <div key={idx} className="py-3 sm:py-4 border-b border-border/50 flex justify-center">
-                  {item.miniVacuum ? (
+                  {item.turbinePro ? (
                     <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -100,10 +100,10 @@ export default function ComparisonSection() {
         {/* Bottom CTA */}
         <div className="bg-primary/10 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-3 sm:space-y-4">
           <p className="text-sm sm:text-base text-muted-foreground">
-            Ready to experience the difference?
+            Ready to experience real filtration?
           </p>
           <button className="cta-primary mx-auto px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg">
-            LEARN MORE ABOUT FEATURES
+            LEARN MORE ABOUT FEATURES →
           </button>
         </div>
       </div>
