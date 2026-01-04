@@ -4,7 +4,7 @@ export default function SocialProofSection() {
       name: "Jessica Torres",
       role: "Health-Conscious Parent",
       rating: 5,
-      quote: "I have two kids with asthma and never realized our old vacuum was making things worse. After switching to TurbinePro, their symptoms improved within days. The filter proof is undeniable—it turned black after cleaning our car once.",
+      quote: "I have two kids with asthma and never realized our old vacuum was making things worse. After switching to VORTIX, their symptoms improved within days. The filter proof is undeniable—it turned black after cleaning our car once.",
       avatar: "JT"
     },
     {
@@ -119,13 +119,13 @@ export default function SocialProofSection() {
             <div className="bg-card rounded-lg p-6 border border-border/50 space-y-3">
               <h4 className="font-bold text-lg">The Sand Test</h4>
               <p className="text-sm text-muted-foreground">
-                Pour one cup of beach sand onto automotive carpet. Run the vacuum over it in a single pass. Budget handhelds leave 40–60% of sand behind because they lack the airflow to dislodge embedded particles. TurbinePro cleared 91% of sand on the first pass and 98% on the second—performance that rivals corded shop-vacs despite being completely portable.
+                Pour one cup of beach sand onto automotive carpet. Run the vacuum over it in a single pass. Budget handhelds leave 40–60% of sand behind because they lack the airflow to dislodge embedded particles. VORTIX cleared 91% of sand on the first pass and 98% on the second—performance that rivals corded shop-vacs despite being completely portable.
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 border border-border/50 space-y-3">
               <h4 className="font-bold text-lg">The Smoke Chamber Test</h4>
               <p className="text-sm text-muted-foreground">
-                Pump theatrical smoke into the vacuum's intake while it's running. If the exhaust air is clear, the filtration is sealed. If smoke pours out the back, you're breathing everything you just tried to clean. TurbinePro's H11 sealed-gasket system passed this test with zero visible smoke emission—a result fewer than 15% of consumer handhelds achieve.
+                Pump theatrical smoke into the vacuum's intake while it's running. If the exhaust air is clear, the filtration is sealed. If smoke pours out the back, you're breathing everything you just tried to clean. VORTIX's H11 sealed-gasket system passed this test with zero visible smoke emission—a result fewer than 15% of consumer handhelds achieve.
               </p>
             </div>
           </div>
@@ -223,12 +223,6 @@ export default function SocialProofSection() {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center pt-8 sm:pt-12">
-          <button className="cta-primary px-8 py-4 font-bold text-lg">
-            EXPLORE THE TURBINEPRO SOLUTION →
-          </button>
-        </div>
       </div>
     </section>
   );
