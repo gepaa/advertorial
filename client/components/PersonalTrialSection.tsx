@@ -18,14 +18,13 @@ export default function PersonalTrialSection() {
               But after yet another sneezing fit while vacuuming my car, I decided I had nothing to lose.
             </p>
             <p className="font-semibold text-foreground">
-              So I ordered the TurbinePro 4-in-1, which came with:
+              So I ordered the VORTIX 4-in-1, which came with:
             </p>
           </div>
 
           {/* What's Included */}
           <ul className="space-y-3 text-base sm:text-lg">
             {[
-              "50% off the first purchase",
               "A 30-day money-back guarantee",
               "Free shipping"
             ].map((item, idx) => (
