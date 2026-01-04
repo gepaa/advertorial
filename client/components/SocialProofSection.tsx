@@ -25,39 +25,121 @@ export default function SocialProofSection() {
 
   return (
     <section className="section-padding bg-white">
-      <div className="space-y-12 sm:space-y-16">
-        {/* Section Header */}
-        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-widest text-primary">What Customers Say</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            See the Results Others Are Experiencing
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground">
-            Thousands of families have transformed the air quality in their homes and vehicles
-          </p>
+      <div className="space-y-16 sm:space-y-20 max-w-5xl mx-auto">
+        {/* SECTION 9: THE BENEFITS */}
+        <div className="space-y-12">
+          <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              The Benefits Add Up Fast
+            </h2>
+          </div>
+
+          {/* Benefits Grid */}
+          <div className="space-y-8">
+            {/* Benefit 1: Cleaner Air */}
+            <div className="space-y-3">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Cleaner Air for Your Family
+              </h3>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                When particles are actually captured instead of recirculated, your kids breathe cleaner air. That means fewer allergy flare-ups, less morning congestion, and reduced asthma triggers.
+              </p>
+            </div>
+
+            {/* Benefit 2: Visible Proof */}
+            <div className="space-y-3">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Visible Proof It's Working
+              </h3>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                After cleaning a car interior or workspace, the H11 filter turns from white to dark grey. That's the "invisible enemy" you'd normally be breathing—now trapped where it belongs.
+              </p>
+            </div>
+
+            {/* Benefit 3: Multi-Functional */}
+            <div className="space-y-3">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Multi-Functional Design Saves Money
+              </h3>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                The 4-in-1 capability (vacuum, blower, inflator, pump) eliminates recurring costs:
+              </p>
+              <ul className="space-y-2 text-base sm:text-lg">
+                {[
+                  "No more $6 compressed air cans every month",
+                  "No more $80–$200 professional detailing visits",
+                  "One tool replaces four separate purchases"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-secondary font-bold mt-1">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Benefit 4: Compact */}
+            <div className="space-y-3">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Compact & Always Ready
+              </h3>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                At 11 inches and 0.8 pounds, it fits in your glovebox or desk drawer. See a crumb? Handle it in 60 seconds. No dragging out extension cords or bulky equipment.
+              </p>
+            </div>
+
+            {/* Benefit 5: Tested */}
+            <div className="space-y-3">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Backed by Real Testing
+              </h3>
+              <ul className="space-y-2 text-base sm:text-lg">
+                {[
+                  "Sand Test: 91% clearance on first pass",
+                  "Smoke Chamber Test: Zero visible exhaust emissions",
+                  "30 Air Watts: Verified cleaning power (not fake Pascal claims)"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-secondary font-bold mt-1">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
-        {/* Before/After Results Grid */}
-        <div className="space-y-6 sm:space-y-8">
-          <h3 className="text-2xl sm:text-3xl font-bold">The Sand Test & Smoke Chamber Validation</h3>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+        {/* VALIDATION TESTS */}
+        <div className="space-y-6 sm:space-y-8 border-t border-gray-200 pt-12 sm:pt-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center">The Proof Is in the Testing</h3>
+          <p className="text-base sm:text-lg text-muted-foreground text-center">
             Extraordinary claims require measurable proof. Professional detailers use two standard tests to separate real tools from disposable junk.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="bg-card rounded-lg p-6 border border-border/50 space-y-3">
               <h4 className="font-bold text-lg">The Sand Test</h4>
-              <p className="text-sm text-muted-foreground">Pour one cup of beach sand onto automotive carpet. Run the vacuum over it in a single pass. Budget handhelds leave 40–60% of sand behind because they lack the airflow to dislodge embedded particles. TurbinePro cleared 91% of sand on the first pass and 98% on the second—performance that rivals corded shop-vacs despite being completely portable.</p>
+              <p className="text-sm text-muted-foreground">
+                Pour one cup of beach sand onto automotive carpet. Run the vacuum over it in a single pass. Budget handhelds leave 40–60% of sand behind because they lack the airflow to dislodge embedded particles. TurbinePro cleared 91% of sand on the first pass and 98% on the second—performance that rivals corded shop-vacs despite being completely portable.
+              </p>
             </div>
             <div className="bg-card rounded-lg p-6 border border-border/50 space-y-3">
               <h4 className="font-bold text-lg">The Smoke Chamber Test</h4>
-              <p className="text-sm text-muted-foreground">Pump theatrical smoke into the vacuum's intake while it's running. If the exhaust air is clear, the filtration is sealed. If smoke pours out the back, you're breathing everything you just tried to clean. TurbinePro's H11 sealed-gasket system passed this test with zero visible smoke emission—a result fewer than 15% of consumer handhelds achieve.</p>
+              <p className="text-sm text-muted-foreground">
+                Pump theatrical smoke into the vacuum's intake while it's running. If the exhaust air is clear, the filtration is sealed. If smoke pours out the back, you're breathing everything you just tried to clean. TurbinePro's H11 sealed-gasket system passed this test with zero visible smoke emission—a result fewer than 15% of consumer handhelds achieve.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Customer Testimonials */}
-        <div className="space-y-6 sm:space-y-8">
-          <h3 className="text-2xl sm:text-3xl font-bold">Customer Stories</h3>
+        {/* CUSTOMER TESTIMONIALS */}
+        <div className="space-y-8 border-t border-gray-200 pt-12 sm:pt-16">
+          <div className="text-center space-y-3 sm:space-y-4">
+            <h3 className="text-2xl sm:text-3xl font-bold">Customer Stories</h3>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              Thousands of families have transformed the air quality in their homes and vehicles
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white rounded-lg p-6 sm:p-8 space-y-4 border border-gray-200">
@@ -90,60 +172,62 @@ export default function SocialProofSection() {
           </div>
         </div>
 
-        {/* Key Results Summary */}
-        <div className="bg-blue-50 border border-primary rounded-lg p-8 sm:p-12 space-y-6">
-          <h3 className="text-2xl sm:text-3xl font-bold">By The Numbers</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
-            {[
-              { number: "64,000+", label: "Satisfied Customers" },
-              { number: "91%", label: "Sand Clearance Rate" },
-              { number: "99.5%", label: "Particle Capture Efficiency" },
-              { number: "4-in-1", label: "Functionality" }
-            ].map((stat, idx) => (
-              <div key={idx} className="space-y-2">
-                <div className="text-2xl sm:text-4xl font-bold text-primary">{stat.number}</div>
-                <p className="text-xs sm:text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
+        {/* SECTION 13: THE BOTTOM LINE */}
+        <div className="space-y-8 border-t border-gray-200 pt-12 sm:pt-16">
+          <div className="space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-center">
+              The Bottom Line
+            </h2>
+            <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              <p>
+                Sometimes the simplest solutions are the most powerful.
+              </p>
+              <p>
+                You don't need a $400 Dyson.
+              </p>
+              <p>
+                You don't need professional detailing every month.
+              </p>
+              <p>
+                You just need a tool that actually traps what it claims to clean.
+              </p>
+            </div>
+          </div>
+
+          {/* If You've Been... */}
+          <div className="bg-blue-50 border border-primary/20 rounded-lg p-6 sm:p-8 space-y-4">
+            <p className="font-semibold text-foreground text-lg">If you've been:</p>
+            <ul className="space-y-3 text-base sm:text-lg">
+              {[
+                "Sneezing or getting congestion after vacuuming",
+                "Noticing your kids' allergies flare up in the car",
+                "Frustrated by bulky vacuums that can't reach tight spaces",
+                "Wasting money on compressed air cans and detailing visits"
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                  <span className="text-secondary font-bold mt-1">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Final Statement */}
+          <div className="text-center space-y-4">
+            <p className="text-lg sm:text-xl font-semibold text-foreground">
+              This might be the easiest change you ever make.
+            </p>
+            <p className="text-lg sm:text-xl text-foreground font-bold">
+              Because breathing cleaner air changes everything.
+            </p>
           </div>
         </div>
 
-        {/* Why Choose Us */}
-        <div className="space-y-6 sm:space-y-8">
-          <h3 className="text-2xl sm:text-3xl font-bold">Why Choose TurbinePro 4-in-1?</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Professional-Grade Filtration Technology",
-                description: "H11 HEPA sealed-gasket system and 30 verified Air Watts deliver performance that budget alternatives can't match."
-              },
-              {
-                title: "4-in-1 Versatility Saves Money",
-                description: "One tool replaces a vacuum, blower, inflator, and pump—eliminating the need for multiple purchases and recurring costs."
-              },
-              {
-                title: "Compact & Always Ready",
-                description: "Just 11 inches long and 0.8 pounds—fits in your glovebox, desk drawer, or closet for instant access."
-              },
-              {
-                title: "Rigorously Tested & Verified",
-                description: "Passes both the Sand Test (91% first-pass clearance) and Smoke Chamber Test (zero emissions)."
-              },
-              {
-                title: "Washable Filter Eliminates Subscriptions",
-                description: "No hidden costs or recurring filter purchases—just rinse, dry, and reinstall for years of use."
-              },
-              {
-                title: "30-Day Money-Back Guarantee",
-                description: "Try it risk-free. If you're not satisfied with the air quality improvement, return it for a full refund."
-              }
-            ].map((benefit, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-6 border border-gray-200 space-y-2">
-                <h4 className="font-bold text-lg">{benefit.title}</h4>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+        {/* Call to Action */}
+        <div className="text-center pt-8 sm:pt-12">
+          <button className="cta-primary px-8 py-4 font-bold text-lg">
+            EXPLORE THE TURBINEPRO SOLUTION →
+          </button>
         </div>
       </div>
     </section>
