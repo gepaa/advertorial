@@ -4,20 +4,6 @@ export default function OfferSection() {
       <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
         {/* Main Offer Box */}
         <div className="space-y-8 sm:space-y-12">
-          <div className="text-center space-y-4 sm:space-y-6">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-              Limited-Time Offer: 50% Off
-            </h2>
-            <div className="space-y-2">
-              <p className="text-lg text-muted-foreground">
-                Regular Price: <span className="line-through">$99.99</span>
-              </p>
-              <p className="text-4xl sm:text-5xl font-bold text-secondary">
-                Today Only: $49.99
-              </p>
-            </div>
-          </div>
-
           {/* What's Included */}
           <div className="bg-blue-50 border border-primary/20 rounded-lg p-6 sm:p-8 space-y-6">
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground text-center">
