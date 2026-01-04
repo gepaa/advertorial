@@ -1,90 +1,285 @@
-interface Discovery {
-  number: number;
-  title: string;
-  subtitle: string;
-  description: string;
-  highlight?: string;
-}
-
-const discoveries: Discovery[] = [
-  {
-    number: 1,
-    title: "Discovery #1",
-    subtitle: "The \"PM2.5 Cannon\" Effect: Your Cheap Vacuum Is Making Your Air Quality Worse",
-    description: "Here's the physics problem that budget vacuum brands hope you never learn about. When a vacuum lacks a sealed filtration system, it doesn't actually remove contaminants—it redistributes them. The motor sucks in visible debris like crumbs and pet hair, but it also pulls in something far more dangerous: microscopic particles measuring 2.5 microns or smaller. These particles are called PM2.5, and they include pollen, dust mite waste, mold spores, and fine allergen silt. You can't see them with the naked eye. But in an unsealed vacuum, they get pulled through the motor housing and immediately blasted out the exhaust vent—directly into the air you and your family breathe. For parents cleaning car seats where their children's faces rest, this isn't just inefficient cleaning—it's actively contaminating the micro-environment you're trying to protect.",
-    highlight: "60% of Americans experience respiratory issues linked to poor indoor air quality"
-  },
-  {
-    number: 2,
-    title: "Discovery #2",
-    subtitle: "The Suction Power Lie: Why \"Air Watts\" Matter More Than Marketing Claims",
-    description: "Walk into any store and you'll see handheld vacuums advertising \"12,000Pa!\" or \"15,000Pa!\" suction power in bold letters. Here's what those numbers actually mean: nothing. Pascals measure sealed suction—the static pressure generated when the vacuum's inlet is completely blocked. It's a metric designed to sound impressive, but it has zero relationship to real-world cleaning ability. You could create a vacuum with 20,000Pa by shrinking the inlet down to the size of a pinhole. It would have enormous pressure but couldn't move a single crumb because there's no airflow. The honest metric—the one professional equipment manufacturers use—is Air Watts (AW). Air Watts measure the actual work a vacuum performs by calculating both suction pressure AND airflow volume. It's the difference between a fire hose (high volume, real cleaning power) and a medical syringe (high pressure, useless for cleaning). At 30 verified Air Watts, TurbinePro delivers suction power comparable to early Dyson cordless models—but in a device that fits in your glovebox.",
-    highlight: "30 Verified Air Watts vs. Marketing Claims"
-  },
-  {
-    number: 3,
-    title: "Discovery #3",
-    subtitle: "The 4-in-1 Design: One Device That Replaces Four Expensive Tools",
-    description: "Most handheld vacuums do one thing: vacuum. And they do it poorly. TurbinePro was engineered with a fundamentally different value equation. Function 1: Vacuum—The precision nozzle reaches into the spaces where bulky shop-vac attachments can't fit: between car seat rails, inside door pockets, along keyboard rows, under couch cushions. Parents use it for the \"60-second reset\" between errands. Function 2: Blower—This is the function that converts skeptics into believers. Instead of spending $6 per can on compressed air (and replacing them monthly), the blower mode delivers unlimited bursts. It clears dust from dashboard vents, dislodges particles from electronics, and eliminates the recurring cost of aerosol cans entirely. Function 3: Inflator—Pool floats, air mattresses, bicycle tires, yoga balls, camping gear. Users report inflating a queen-size air mattress in under three minutes. Function 4: Deflator—Vacuum-sealing storage bags, compressing sleeping bags for travel, removing air from food containers. When you do the math, this single device replaces a handheld vacuum ($30–$50), recurring compressed air cans ($72–$100/year), a portable air pump ($25–$40), and professional car detailing sessions ($80–$200 per visit).",
-    highlight: "Replaces 4 Separate Tools"
-  }
-];
-
 export default function ReasonsSection() {
   return (
     <section id="benefits" className="section-padding bg-white">
-      <div className="space-y-16 sm:space-y-20">
-        {/* Section Header */}
-        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-8 sm:mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-primary">Why It Works</p>
+      <div className="space-y-16 sm:space-y-20 max-w-4xl mx-auto">
+        {/* SECTION 3: THE PAIN */}
+        <div className="space-y-6">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            Three Key Discoveries About Handheld Vacuum Technology
+            Every Cleaning Session Felt the Same
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground">
-            Our research uncovered what discount vacuum manufacturers don't want you to know
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              I'd pull out my handheld vacuum to clean my daughter's car seat.
+            </p>
+            <p>
+              Within 30 seconds, I'd start sneezing.
+            </p>
+            <p>
+              My eyes would water. My throat would feel scratchy.
+            </p>
+            <p>
+              And there was always that smell—like burning dust mixed with something chemical.
+            </p>
+            <p>
+              I told myself it was normal.
+            </p>
+            <p className="italic">
+              "That's just what vacuums smell like."
+            </p>
+            <p>
+              But then I'd look at my daughter's face resting against that same car seat fabric.
+            </p>
+            <p>
+              The same fabric I'd just "cleaned."
+            </p>
+            <p>
+              And I couldn't shake the feeling that something was wrong.
+            </p>
+          </div>
+        </div>
+
+        {/* SECTION 4: THE REVELATION */}
+        <div className="space-y-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Then I Learned Something That Honestly Scared Me
+          </h2>
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Your vacuum is supposed to remove contaminants from your environment.
+            </p>
+            <p>
+              But when a vacuum lacks sealed filtration, it does something far worse:
+            </p>
+            <p className="font-semibold text-foreground text-lg">
+              It turns into what engineers call a "PM2.5 Cannon."
+            </p>
+            <p>
+              Here's how it works:
+            </p>
+          </div>
+
+          {/* PM2.5 Cannon Explanation */}
+          <div className="bg-blue-50 border border-primary/20 rounded-lg p-6 space-y-4">
+            <div className="space-y-3">
+              <p className="font-semibold text-foreground">The motor sucks in visible debris—crumbs, pet hair, dirt.</p>
+              <p className="text-muted-foreground">
+                But it also pulls in microscopic particles measuring 2.5 microns or smaller: pollen, dust mite waste, mold spores, allergen silt.
+              </p>
+              <p className="text-muted-foreground">
+                These particles are invisible to the naked eye.
+              </p>
+              <p className="text-muted-foreground">
+                And in a vacuum without sealed filtration, they get pulled straight through the motor housing and blasted out the exhaust vent—directly into the air you and your family breathe.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              If you've ever seen dust floating in sunlight right after vacuuming, you've witnessed it.
+            </p>
+            <p>
+              If you've smelled that "burning dust" odor, you've breathed it.
+            </p>
+            <p className="font-semibold text-foreground">
+              Over time, this constant exposure can cause:
+            </p>
+          </div>
+
+          {/* Health Impact List */}
+          <ul className="space-y-2 text-base sm:text-lg">
+            {[
+              "Chronic respiratory irritation",
+              "Worsening seasonal allergies",
+              "Persistent morning congestion",
+              "Increased asthma triggers in children"
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                <span className="text-secondary font-bold mt-1">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed pt-2">
+            <p>
+              For parents cleaning car seats where their kids' faces rest, this isn't just inefficient.
+            </p>
+            <p className="font-semibold text-foreground">
+              It's actively contaminating the space you're trying to protect.
+            </p>
+            <p className="text-foreground font-semibold">
+              That honestly terrified me.
+            </p>
+          </div>
+        </div>
+
+        {/* SECTION 5: THE FAILED SOLUTIONS */}
+        <div className="space-y-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            I Tried Everything (Nothing Worked)
+          </h2>
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              I was desperate for a solution.
+            </p>
+            <p className="font-semibold">I tried:</p>
+          </div>
+
+          {/* Failed Solutions */}
+          <div className="space-y-3 text-base sm:text-lg">
+            {[
+              { attempt: "Wiping with microfiber cloths", result: "just pushed dust into the air vents" },
+              { attempt: "Using my full-size vacuum", result: "too bulky to reach between car seat rails" },
+              { attempt: 'Buying a "premium" handheld', result: "still no sealed filtration—same problem" },
+              { attempt: "Vacuuming outside with the windows open", result: "awkward, and didn't solve the core issue" }
+            ].map((item, idx) => (
+              <p key={idx} className="text-muted-foreground">
+                <span className="font-semibold text-foreground">{item.attempt}</span> ({item.result})
+              </p>
+            ))}
+          </div>
+
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed pt-2">
+            <p>
+              Nothing gave me confidence that I was actually making the air cleaner.
+            </p>
+            <p>
+              Then I started noticing something I couldn't ignore.
+            </p>
+          </div>
+        </div>
+
+        {/* SECTION 6: SOCIAL PROOF DISCOVERY */}
+        <div className="space-y-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            People Kept Mentioning This "Sealed Filtration" Thing
+          </h2>
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              At first, it was just one comment in an auto detailing thread.
+            </p>
+            <p>
+              Then another in a parenting group.
+            </p>
+            <p>
+              And another in a cleaning tips forum.
+            </p>
+            <p>
+              People were switching to something called "H11 HEPA sealed-gasket vacuums."
+            </p>
+            <p>
+              They weren't talking about brands or prices.
+            </p>
+            <p className="font-semibold">
+              They were talking about a mechanism:
+            </p>
+          </div>
+
+          {/* Social Proof Quotes */}
+          <div className="space-y-3 bg-blue-50 border border-primary/20 rounded-lg p-6">
+            {[
+              "The filter actually turns grey after one use—that's how you know it's working.",
+              "I passed the smoke test. Zero exhaust emissions. Finally.",
+              "My kids' allergies improved within a week of switching."
+            ].map((quote, idx) => (
+              <p key={idx} className="text-base sm:text-lg italic text-foreground">
+                "{quote}"
+              </p>
+            ))}
+          </div>
+
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed pt-2">
+            <p>
+              Soon, it felt impossible not to notice.
+            </p>
+            <p>
+              So I did what anyone would do—I researched it.
+            </p>
+          </div>
+        </div>
+
+        {/* SECTION 7: THE DISCOVERY */}
+        <div className="space-y-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            What I Discovered Changed Everything
+          </h2>
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              There were articles from cleaning professionals, health experts, even engineers explaining this technology.
+            </p>
+            <p>
+              It wasn't a gimmick.
+            </p>
+            <p className="font-semibold text-foreground">
+              It was a simple mechanical solution designed to:
+            </p>
+          </div>
+
+          {/* Discovery Points */}
+          <ul className="space-y-3 text-base sm:text-lg">
+            {[
+              "Capture particles as small as 0.3 microns",
+              "Seal them inside with gasket compression technology",
+              'Prevent exhaust re-emission (the "Blowback" problem)',
+              "Actually clean the air, not just move dust around"
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-muted-foreground">
+                <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed pt-2">
+            No chemicals. No subscriptions. Just real filtration.
           </p>
         </div>
 
-        {/* Discoveries */}
-        {discoveries.map((discovery, index) => {
-          const isImageLeft = index % 2 === 0;
+        {/* SECTION 8: HOW IT WORKS */}
+        <div className="space-y-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            How Sealed-Gasket Filtration Actually Works
+          </h2>
+          <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Traditional handheld vacuums have gaps around the filter.
+            </p>
+            <p>
+              Air bypasses the filtration media and shoots straight out the exhaust vent—carrying PM2.5 particles with it.
+            </p>
+            <p className="font-semibold text-foreground">
+              Sealed-gasket systems are different:
+            </p>
+            <p>
+              The H11 HEPA filter is surrounded by compression seals that force 100% of the air through the filtration pleats.
+            </p>
+          </div>
 
-          return (
-            <div key={discovery.number} className="space-y-6 sm:space-y-8">
-              {/* Grid Layout - Image and Text */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                {/* Image */}
-                <div className={`w-full bg-gray-50 border border-gray-200 rounded-lg overflow-hidden flex items-center justify-center aspect-video ${!isImageLeft ? "lg:order-2" : ""}`}>
-                  <div className="text-center text-muted-foreground w-full h-full flex items-center justify-center">
-                    <svg className="w-20 h-20 sm:w-24 sm:h-24 mx-auto opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                </div>
+          {/* How It Works Result */}
+          <div className="bg-blue-50 border border-primary/20 rounded-lg p-6 space-y-3">
+            <p className="font-semibold text-foreground text-base sm:text-lg">That means:</p>
+            {[
+              "What goes in, stays in",
+              "Particles down to 0.3 microns get trapped",
+              "Exhaust air is clean—verified by smoke chamber testing"
+            ].map((item, idx) => (
+              <p key={idx} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
+                <span className="text-secondary font-bold mt-1">•</span>
+                <span>{item}</span>
+              </p>
+            ))}
+          </div>
+        </div>
 
-                {/* Text Content */}
-                <div className={`space-y-4 sm:space-y-6 ${isImageLeft ? "" : "lg:order-1"}`}>
-                  <div className="space-y-2">
-                    <p className="text-sm font-bold uppercase tracking-widest text-primary">{discovery.title}</p>
-                    <h3 className="text-2xl sm:text-3xl font-bold leading-tight">{discovery.subtitle}</h3>
-                  </div>
-
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                    {discovery.description}
-                  </p>
-
-                  {discovery.highlight && (
-                    <div className="pt-2">
-                      <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-blue-50 border border-primary rounded text-primary font-bold text-sm sm:text-base">
-                        {discovery.highlight}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {/* CTA */}
+        <div className="bg-blue-50 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-4 mt-8">
+          <p className="text-lg sm:text-xl font-semibold text-foreground">
+            Now that I understood the problem and the solution, I had to find the right product.
+          </p>
+        </div>
       </div>
     </section>
   );
