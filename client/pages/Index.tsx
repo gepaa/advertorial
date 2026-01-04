@@ -8,16 +8,22 @@ import OfferSection from "@/components/OfferSection";
 import SpecsSection from "@/components/SpecsSection";
 import Footer from "@/components/Footer";
 import StickyMobileButton from "@/components/StickyMobileButton";
+import SectionImageDivider from "@/components/SectionImageDivider";
 
 export default function Index() {
   return (
     <div className="min-h-screen bg-white text-foreground pb-20 md:pb-0">
       <Header />
       <HeroSection />
+      <SectionImageDivider title="Sealed-Gasket Filtration Technology" description="Advanced engineering for cleaner air" />
       <ReasonsSection />
+      <SectionImageDivider title="How It Compares" description="Professional-grade performance in a compact design" />
       <ComparisonSection />
+      <SectionImageDivider title="Real-World Results" description="See the transformation for yourself" />
       <PersonalTrialSection />
+      <SectionImageDivider title="Customer Proof" description="Thousands of families breathing cleaner air" />
       <SocialProofSection />
+      <SectionImageDivider title="Ready to Upgrade?" description="Everything you need is included" />
       <OfferSection />
       <SpecsSection />
       <Footer />
