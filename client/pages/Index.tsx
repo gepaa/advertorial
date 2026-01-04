@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ReasonsSection from "@/components/ReasonsSection";
 import ComparisonSection from "@/components/ComparisonSection";
+import PersonalTrialSection from "@/components/PersonalTrialSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import OfferSection from "@/components/OfferSection";
 import SpecsSection from "@/components/SpecsSection";
@@ -15,6 +16,7 @@ export default function Index() {
       <HeroSection />
       <ReasonsSection />
       <ComparisonSection />
+      <PersonalTrialSection />
       <SocialProofSection />
       <OfferSection />
       <SpecsSection />
