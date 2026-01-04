@@ -23,7 +23,7 @@ export default function ComparisonSection() {
         <div className="text-center space-y-3 sm:space-y-4">
           <p className="text-xs font-bold uppercase tracking-widest text-primary">The Proof</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            How TurbinePro 4-in-1 Differs From Cheap Alternatives
+            How VORTIX 4-in-1 Differs From Cheap Alternatives
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
             Professional-grade engineering vs. budget vacuum compromises
@@ -43,7 +43,7 @@ export default function ComparisonSection() {
               ))}
             </div>
 
-            {/* TurbinePro 4-in-1 Column */}
+            {/* VORTIX 4-in-1 Column */}
             <div className="space-y-6 sm:space-y-8">
               <div className="bg-primary text-primary-foreground rounded-lg p-4 sm:p-6 text-center">
                 <div className="flex justify-center mb-2">
@@ -51,7 +51,7 @@ export default function ComparisonSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-base sm:text-lg">TurbinePro 4-in-1</h3>
+                <h3 className="font-bold text-base sm:text-lg">VORTIX 4-in-1</h3>
                 <p className="text-xs sm:text-sm opacity-90 mt-1">Professional Grade</p>
               </div>
               {features.map((item, idx) => (
@@ -97,15 +97,6 @@ export default function ComparisonSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="bg-blue-50 border border-primary rounded-lg p-6 sm:p-8 text-center space-y-3 sm:space-y-4">
-          <p className="text-sm sm:text-base text-muted-foreground">
-            Ready to experience real filtration?
-          </p>
-          <button className="cta-primary mx-auto px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg">
-            LEARN MORE ABOUT FEATURES →
-          </button>
-        </div>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="section-padding">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
           <div className="space-y-2 sm:space-y-4">
-            <h4 className="font-bold text-sm sm:text-base">TURBINEPRO 4-IN-1</h4>
+            <h4 className="font-bold text-sm sm:text-base">VORTIX 4-IN-1</h4>
             <p className="text-xs sm:text-sm text-primary-foreground/80">
               Professional-grade air quality in a glovebox-sized package.
             </p>
@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-4 sm:pt-6 space-y-4 sm:space-y-6">
           <div className="text-center text-xs text-primary-foreground/80">
-            <p>© 2026 TurbinePro. All rights reserved.</p>
+            <p>© 2026 VORTIX. All rights reserved.</p>
           </div>
 
           <div className="flex justify-center gap-2 sm:gap-4 text-xs text-primary-foreground/80 flex-wrap">
