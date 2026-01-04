@@ -85,35 +85,33 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Featured Quote Box */}
-            <div className="bg-blue-50 border-l-4 border-primary rounded p-4 sm:p-6">
-              <p className="text-sm sm:text-base italic text-foreground">
-                "Within the first week of switching to TurbinePro, my seasonal allergies completely stopped flaring up after cleaning. The filter turned dark grey after one use—that's when I realized what my old vacuum had been putting back into the air I breathe."
-              </p>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-3">
-                — Sarah Mitchell, Mother of Two
-              </p>
-            </div>
-
-            {/* Featured Benefits */}
-            <div className="space-y-3">
-              <p className="text-xs font-bold uppercase tracking-widest text-primary">Key Features</p>
-              <ul className="space-y-2">
-                {[
-                  "H11 HEPA sealed-gasket filtration system",
-                  "30 verified Air Watts (not inflated Pa claims)",
-                  "91% sand removal on first pass",
-                  "4-in-1 multi-tool functionality",
-                  "Fits in your glovebox or desk drawer"
-                ].map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3 text-sm sm:text-base">
-                    <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Featured Highlight - What's Included */}
+            <div className="space-y-4 bg-blue-50 rounded-lg p-6 border border-primary/20">
+              <p className="text-xs font-bold uppercase tracking-widest text-primary">Quick Summary</p>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="font-bold text-lg text-foreground mb-2">The Solution Is Simpler Than You Think</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    You don't need a $400 Dyson. You don't need professional detailing every month. You just need a tool that actually traps what it claims to clean.
+                  </p>
+                </div>
+                <ul className="space-y-2 mt-4">
+                  {[
+                    "H11 HEPA sealed-gasket filtration system",
+                    "30 verified Air Watts of cleaning power",
+                    "91% sand removal on first pass",
+                    "4-in-1 multi-tool functionality",
+                    "Compact: 11 inches, 0.8 pounds"
+                  ].map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-3 text-sm sm:text-base">
+                      <svg className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
