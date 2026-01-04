@@ -17,22 +17,60 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Column - Text Content */}
           <div className="space-y-6 sm:space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                Why Health-Conscious Parents Are Replacing Their Old Vacuums With This "Invisible Enemy" Trapping Tool
-              </h1>
+            <div className="space-y-6 sm:space-y-8">
+              <div className="space-y-2">
+                <p className="text-sm sm:text-base font-bold uppercase tracking-widest text-secondary">TRENDING</p>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                  Can a Simple 4-in-1 Tool Really Stop You From Breathing Recirculated Dust Every Time You Clean?
+                </h1>
+              </div>
 
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                I never thought a Goldfish cracker could change my entire understanding of "clean."
+              <p className="text-lg sm:text-xl font-semibold text-foreground">
+                Health experts say yes — and thousands of parents are already making the switch.
               </p>
 
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                It was a Tuesday afternoon. I'd just buckled my daughter into her car seat when I felt something sticky wedged deep in the crevice where the buckle meets the cushion. I pulled my hand back to find a substance I couldn't identify—part food, part mystery, entirely disgusting.
-              </p>
+              <div className="space-y-6 pt-4">
+                <div className="space-y-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold">
+                    A Question That Made Me Look at My Vacuum Differently
+                  </h2>
+                  <div className="space-y-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                    <p>It wasn't a dramatic moment.</p>
+                    <p>It wasn't a news article.</p>
+                    <p>It was just a comment buried in a parenting forum that stopped me cold:</p>
+                  </div>
+                </div>
 
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                That's when I realized my car wasn't just messy. <span className="text-foreground font-semibold">It had become a mobile breeding ground.</span>
-              </p>
+                <div className="bg-blue-50 border-l-4 border-primary pl-4 py-2 text-base sm:text-lg italic text-foreground">
+                  "Your handheld vacuum is probably making your kids' allergies worse."
+                </div>
+
+                <div className="space-y-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  <p>At first, I dismissed it.</p>
+                  <p>Then I kept seeing similar comments. Different people. Same warning.</p>
+                </div>
+
+                <div className="space-y-2 text-base sm:text-lg italic text-muted-foreground">
+                  <p>"Cheap vacuums blow dust back in your face."</p>
+                  <p>"Most handhelds don't filter anything—they just move particles around."</p>
+                  <p>"Check your filter after cleaning. If it's still white, you're breathing everything you just vacuumed."</p>
+                </div>
+
+                <div className="space-y-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  <p>That's when I started wondering:</p>
+                </div>
+
+                <div className="space-y-3 text-base sm:text-lg text-foreground font-semibold leading-relaxed">
+                  <p>What if I've been doing this all wrong?</p>
+                  <p>What if the tool I'm using to "protect" my kids is actually contaminating the air they breathe?</p>
+                  <p>Am I missing something obvious that everyone else already knows?</p>
+                </div>
+
+                <div className="space-y-3 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  <p>So I decided to dig deeper.</p>
+                  <p>And what I found changed how I think about cleaning forever.</p>
+                </div>
+              </div>
             </div>
           </div>
 
