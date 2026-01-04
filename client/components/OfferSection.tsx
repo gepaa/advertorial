@@ -1,31 +1,58 @@
 export default function OfferSection() {
   return (
     <section className="section-padding bg-white">
-      <div className="max-w-4xl mx-auto space-y-12">
-        {/* What's Included */}
-        <div className="bg-blue-50 border border-primary/20 rounded-lg p-6 sm:p-8 space-y-6">
-          <h3 className="text-2xl sm:text-3xl font-bold text-foreground text-center">
-            What's Included with VORTIX 4-in-1:
-          </h3>
-          <ul className="space-y-3 sm:space-y-4">
-            {[
-              "✓ VORTIX 4-in-1 Multi-Tool",
-              "✓ H11 HEPA sealed-gasket filter (washable & reusable)",
-              "✓ Complete attachment set (crevice nozzle, brush, inflator)",
-              "✓ USB-C charging cable",
-              "✓ Hard-shell carrying case",
-              "✓ 30-day money-back guarantee"
-            ].map((item, index) => (
-              <li key={index} className="text-base sm:text-lg text-foreground flex items-start gap-3">
-                <span className="text-secondary flex-shrink-0 font-bold">{item.split('✓')[0]}</span>
-                <span>{item.split('✓')[1]}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
+        {/* Main Offer Box */}
+        <div className="space-y-8 sm:space-y-12">
+          <div className="text-center space-y-4 sm:space-y-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              Limited-Time Offer: 50% Off
+            </h2>
+            <div className="space-y-2">
+              <p className="text-lg text-muted-foreground">
+                Regular Price: <span className="line-through">$99.99</span>
+              </p>
+              <p className="text-4xl sm:text-5xl font-bold text-secondary">
+                Today Only: $49.99
+              </p>
+            </div>
+          </div>
+
+          {/* What's Included */}
+          <div className="bg-blue-50 border border-primary/20 rounded-lg p-6 sm:p-8 space-y-6">
+            <h3 className="text-2xl sm:text-3xl font-bold text-foreground text-center">
+              What's Included:
+            </h3>
+            <ul className="space-y-3 sm:space-y-4">
+              {[
+                "✓ VORTIX 4-in-1 Multi-Tool",
+                "✓ H11 HEPA sealed-gasket filter (washable & reusable)",
+                "✓ Complete attachment set (crevice nozzle, brush, inflator)",
+                "✓ USB-C charging cable",
+                "✓ Hard-shell carrying case",
+                "✓ 30-day money-back guarantee"
+              ].map((item, index) => (
+                <li key={index} className="text-base sm:text-lg text-foreground flex items-start gap-3">
+                  <span className="text-secondary flex-shrink-0 font-bold">{item.split('✓')[0]}</span>
+                  <span>{item.split('✓')[1]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CTA Button */}
+          <div className="flex flex-col items-center gap-4 sm:gap-6">
+            <button className="w-full sm:w-auto cta-primary px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold rounded-lg whitespace-nowrap">
+              CLAIM YOUR 50% DISCOUNT →
+            </button>
+            <p className="text-xs sm:text-sm text-muted-foreground text-center">
+              🔒 Secure checkout • Risk-free 30-day guarantee
+            </p>
+          </div>
         </div>
 
         {/* Trust & Confidence Section */}
-        <div className="space-y-8">
+        <div className="border-t border-gray-200 pt-12 sm:pt-16 space-y-8">
           <h3 className="text-2xl sm:text-3xl font-bold text-center">
             Why You Can Buy with Confidence
           </h3>
