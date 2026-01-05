@@ -15,13 +15,29 @@ export default function Index() {
     <div className="min-h-screen bg-white text-foreground pb-20 md:pb-0">
       <Header />
       <HeroSection />
-      <SectionImageDivider title="Sealed-Gasket Filtration Technology" description="Advanced engineering for cleaner air" />
+      <SectionImageDivider
+        title="Sealed-Gasket Filtration Technology"
+        description="Advanced engineering for cleaner air"
+        imageUrl="https://media.giphy.com/media/CJUjcQPi1d8u68KF3J/giphy.gif"
+      />
       <ReasonsSection />
-      <SectionImageDivider title="How It Compares" description="Professional-grade performance in a compact design" />
+      <SectionImageDivider
+        title="How It Compares"
+        description="Professional-grade performance in a compact design"
+        imageUrl="https://media.giphy.com/media/OdJH9vifQ3zPKq5x6w/giphy.gif"
+      />
       <ComparisonSection />
-      <SectionImageDivider title="Real-World Results" description="See the transformation for yourself" />
+      <SectionImageDivider
+        title="Real-World Results"
+        description="See the transformation for yourself"
+        imageUrl="https://media.giphy.com/media/TidaGZH63kPzmH3jWj/giphy.gif"
+      />
       <PersonalTrialSection />
-      <SectionImageDivider title="Customer Proof" description="Thousands of families breathing cleaner air" />
+      <SectionImageDivider
+        title="Customer Proof"
+        description="Thousands of families breathing cleaner air"
+        imageUrl="https://media.giphy.com/media/3zAiuhsCHc5uEVzkTx/giphy.gif"
+      />
       <SocialProofSection />
       <SectionImageDivider title="Ready to Upgrade?" description="Everything you need is included" />
       <OfferSection />
