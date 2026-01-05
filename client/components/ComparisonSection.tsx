@@ -31,68 +31,112 @@ export default function ComparisonSection() {
         </div>
 
         {/* Comparison Table */}
-        <div className="overflow-x-auto bg-gray-50 rounded-lg border border-gray-200 p-4 sm:p-6">
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 min-w-full">
-            {/* Header Row */}
-            <div className="space-y-6 sm:space-y-8">
-              <div className="h-24"></div>
-              {features.map((item, idx) => (
-                <div key={idx} className="py-3 sm:py-4 border-b border-border/50">
-                  <p className="text-sm sm:text-base font-medium text-foreground">{item.feature}</p>
-                </div>
-              ))}
+        <div className="bg-gray-50 rounded-lg border border-gray-200 p-4 sm:p-6 overflow-x-auto">
+          {/* Mobile View - Stacked Layout */}
+          <div className="sm:hidden space-y-6">
+            {/* Header */}
+            <div className="bg-primary text-primary-foreground rounded-lg p-4 text-center font-bold">
+              VORTIX VACUUM 4-IN-1
             </div>
 
-            {/* VORTIX 4-in-1 Column */}
-            <div className="space-y-6 sm:space-y-8">
-              <div className="bg-primary text-primary-foreground rounded-lg p-4 sm:p-6 text-center">
-                <div className="flex justify-center mb-2">
-                  <svg className="w-12 h-12 sm:w-16 sm:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+            {/* Features */}
+            {features.map((item, idx) => (
+              <div key={idx} className="space-y-3 pb-4 border-b border-gray-200">
+                <p className="font-medium text-foreground">{item.feature}</p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2 text-center">
+                    <p className="text-xs font-semibold text-muted-foreground">VORTIX 4-in-1</p>
+                    {item.turbinePro ? (
+                      <svg className="w-6 h-6 text-secondary mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="w-6 h-6 text-muted-foreground opacity-30 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="space-y-2 text-center">
+                    <p className="text-xs font-semibold text-muted-foreground">Budget Vacuum</p>
+                    {item.budgetVacuum ? (
+                      <svg className="w-6 h-6 text-secondary mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="w-6 h-6 text-destructive mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                  </div>
                 </div>
-                <h3 className="font-bold text-base sm:text-lg">VORTIX 4-in-1</h3>
-                <p className="text-xs sm:text-sm opacity-90 mt-1">Professional Grade</p>
               </div>
-              {features.map((item, idx) => (
-                <div key={idx} className="py-3 sm:py-4 border-b border-gray-200 flex justify-center">
-                  {item.turbinePro ? (
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  ) : (
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-muted-foreground opacity-30" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  )}
-                </div>
-              ))}
-            </div>
+            ))}
+          </div>
 
-            {/* Budget Vacuum Column */}
-            <div className="space-y-6 sm:space-y-8">
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 text-center">
-                <div className="flex justify-center mb-2">
-                  <svg className="w-12 h-12 sm:w-16 sm:h-16 text-muted-foreground opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="font-bold text-base sm:text-lg text-muted-foreground">Budget Vacuum</h3>
-                <p className="text-xs sm:text-sm text-muted-foreground opacity-70 mt-1">Discount Alternative</p>
+          {/* Desktop View - 3 Column Grid */}
+          <div className="hidden sm:block">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6">
+              {/* Header Row */}
+              <div className="space-y-6">
+                <div className="h-24"></div>
+                {features.map((item, idx) => (
+                  <div key={idx} className="py-3 sm:py-4 border-b border-border/50">
+                    <p className="text-sm sm:text-base font-medium text-foreground">{item.feature}</p>
+                  </div>
+                ))}
               </div>
-              {features.map((item, idx) => (
-                <div key={idx} className="py-3 sm:py-4 border-b border-gray-200 flex justify-center">
-                  {item.budgetVacuum ? (
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+
+              {/* VORTIX 4-in-1 Column */}
+              <div className="space-y-6">
+                <div className="bg-primary text-primary-foreground rounded-lg p-4 sm:p-6 text-center">
+                  <div className="flex justify-center mb-2">
+                    <svg className="w-12 h-12 sm:w-16 sm:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                  ) : (
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-destructive" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  )}
+                  </div>
+                  <h3 className="font-bold text-base sm:text-lg">VORTIX 4-in-1</h3>
+                  <p className="text-xs sm:text-sm opacity-90 mt-1">Professional Grade</p>
                 </div>
-              ))}
+                {features.map((item, idx) => (
+                  <div key={idx} className="py-3 sm:py-4 border-b border-gray-200 flex justify-center">
+                    {item.turbinePro ? (
+                      <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="w-6 h-6 sm:w-8 sm:h-8 text-muted-foreground opacity-30" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Budget Vacuum Column */}
+              <div className="space-y-6">
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 text-center">
+                  <div className="flex justify-center mb-2">
+                    <svg className="w-12 h-12 sm:w-16 sm:h-16 text-muted-foreground opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-bold text-base sm:text-lg text-muted-foreground">Budget Vacuum</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground opacity-70 mt-1">Discount Alternative</p>
+                </div>
+                {features.map((item, idx) => (
+                  <div key={idx} className="py-3 sm:py-4 border-b border-gray-200 flex justify-center">
+                    {item.budgetVacuum ? (
+                      <svg className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    ) : (
+                      <svg className="w-6 h-6 sm:w-8 sm:h-8 text-destructive" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
