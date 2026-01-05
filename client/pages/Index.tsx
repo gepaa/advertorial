@@ -39,7 +39,11 @@ export default function Index() {
         imageUrl="https://media.giphy.com/media/3zAiuhsCHc5uEVzkTx/giphy.gif"
       />
       <SocialProofSection />
-      <SectionImageDivider title="Ready to Upgrade?" description="Everything you need is included" />
+      <SectionImageDivider
+        title="Ready to Upgrade?"
+        description="Everything you need is included"
+        imageUrl="https://cdn.builder.io/api/v1/image/assets%2F428d6e0e6eb243e08537dc233df4ba86%2Fefb06c20c30f4c0bbb5c0ecca6684584?format=webp&width=800"
+      />
       <OfferSection />
       <SpecsSection />
       <Footer />
