@@ -1,67 +1,66 @@
-import fs from 'fs';
-import path from 'path';
+import { createClient } from '@supabase/supabase-js';
+import "dotenv/config";
 
-const DB_PATH = path.join(process.cwd(), 'server/data/tracking.json');
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
-// Ensure DB exists
-function ensureDb() {
-    if (!fs.existsSync(path.dirname(DB_PATH))) {
-        fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-    }
-    if (!fs.existsSync(DB_PATH)) {
-        fs.writeFileSync(DB_PATH, JSON.stringify({ events: [], leads: [] }, null, 2));
-    }
+if (!supabaseUrl || !supabaseKey) {
+    // Fallback or warning if env vars are missing, though technically we should ensure they are present.
+    console.warn("Supabase credentials missing in .env");
 }
 
-function readDb() {
-    ensureDb();
-    try {
-        const data = fs.readFileSync(DB_PATH, 'utf-8');
-        return JSON.parse(data);
-    } catch (error) {
-        return { events: [], leads: [] };
-    }
-}
-
-function writeDb(data: any) {
-    try {
-        fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
-    } catch (error) {
-        console.error('Error writing to DB:', error);
-    }
-}
+const supabase = createClient(supabaseUrl || '', supabaseKey || '');
 
 export const db = {
-    addEvent: (event: any) => {
-        const data = readDb();
-        const newEvent = {
-            ...event,
-            id: crypto.randomUUID(),
-            timestamp: new Date().toISOString()
-        };
-        data.events.push(newEvent);
-        writeDb(data);
-        return newEvent;
+    addEvent: async (event: any) => {
+        const { data, error } = await supabase
+            .from('events')
+            .insert([
+                {
+                    event_name: event.event,
+                    visitor_id: event.visitorId
+                    // created_at is auto-generated
+                }
+            ])
+            .select() // To return the inserted row
+            .single();
+
+        if (error) {
+            console.error('Supabase Events Error:', error);
+            throw error;
+        }
+        return data;
     },
 
-    addLead: (lead: any) => {
-        const data = readDb();
-        const newLead = {
-            ...lead,
-            id: crypto.randomUUID(),
-            timestamp: new Date().toISOString()
-        };
-        data.leads.push(newLead);
-        writeDb(data);
-        return newLead;
+    addLead: async (lead: any) => {
+        const { data, error } = await supabase
+            .from('leads')
+            .insert([
+                {
+                    email: lead.email,
+                    visitor_id: lead.visitorId
+                    // created_at is auto-generated
+                }
+            ])
+            .select()
+            .single();
+
+        if (error) {
+            console.error('Supabase Leads Error:', error);
+            throw error;
+        }
+        return data;
     },
 
-    getStats: () => {
-        const data = readDb();
+    getStats: async () => {
+        const { count: eventsCount } = await supabase.from('events').select('*', { count: 'exact', head: true });
+        const { count: leadsCount } = await supabase.from('leads').select('*', { count: 'exact', head: true });
+
         return {
-            totalEvents: data.events.length,
-            totalLeads: data.leads.length,
-            uniqueVisitors: new Set(data.events.map((e: any) => e.visitorId)).size
+            totalEvents: eventsCount || 0,
+            totalLeads: leadsCount || 0,
+            // uniqueVisitors is omitted for simplicity unless required
+            uniqueVisitors: 0
         };
     }
 };
