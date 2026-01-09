@@ -1,4 +1,16 @@
+import { ArrowRight } from "lucide-react";
+import { trackEvent } from "../lib/pixel";
+
 export default function HeroSection() {
+  const handleHeroCta = () => {
+    trackEvent("hero_cta_click");
+    // Scroll to offer or sales page logic if needed, but for now assuming it links or scrolls
+    const offerElement = document.getElementById("offer");
+    if (offerElement) {
+      offerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative w-full overflow-hidden">
       <div className="section-padding">
@@ -21,8 +33,18 @@ export default function HeroSection() {
               <div className="space-y-2">
                 <p className="text-sm sm:text-base font-bold uppercase tracking-widest text-secondary">TRENDING</p>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                  Can a Simple 4-in-1 Tool Really Stop You From Breathing Recirculated Dust Every Time You Clean?
+                  That Dust You Just Vacuumed? You're Breathing It Again.
                 </h1>
+              </div>
+
+              {/* Mobile Image - Visible only on mobile */}
+              {/* Mobile Image - Visible only on mobile */}
+              <div className="lg:hidden w-full rounded-lg overflow-hidden mb-6 border border-primary/20 shadow-lg">
+                <img
+                  src="/images/hero.png"
+                  alt="Vortix Vacuum Hero"
+                  className="w-full h-auto object-cover"
+                />
               </div>
 
               <p className="text-lg sm:text-xl font-semibold text-foreground">
@@ -77,12 +99,13 @@ export default function HeroSection() {
           {/* Right Column - Image & Featured Benefits */}
           <div className="space-y-6">
             {/* Product Image with Background */}
-            <div className="w-full bg-gradient-to-br from-primary to-primary/70 rounded-lg overflow-hidden p-8 sm:p-12 flex items-center justify-center aspect-square sm:aspect-auto border border-primary/20">
-              <div className="text-center text-primary-foreground w-full h-full flex items-center justify-center">
-                <svg className="w-24 h-24 sm:w-32 sm:h-32 mx-auto opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
+            {/* Product Image with Background - Hidden on mobile, visible on lg+ */}
+            <div className="hidden lg:block w-full rounded-lg overflow-hidden border border-primary/20 shadow-2xl skew-y-1 transform hover:skew-y-0 transition-transform duration-700">
+              <img
+                src="/images/hero.png"
+                alt="Vortix Vacuum Hero"
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Featured Highlight - What's Included */}

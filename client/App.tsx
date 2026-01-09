@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+import SalesPage from "./pages/SalesPage";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -21,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/check-availability" element={<Availability />} />
+          <Route path="/offer" element={<SalesPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
