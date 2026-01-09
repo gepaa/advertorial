@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 import SalesPage from "./pages/SalesPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -20,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/check-availability" element={<Availability />} />

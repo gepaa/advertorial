@@ -1,3 +1,6 @@
+
+import { supabase } from './supabase';
+
 export const initPixel = () => {
     let visitorId = localStorage.getItem('vortix_visitor_id');
     if (!visitorId) {
@@ -14,11 +17,19 @@ export const trackEvent = async (eventName: string) => {
     console.log(`[PIXEL] Event: ${eventName} | Visitor: ${visitorId}`);
 
     try {
-        await fetch('/api/track', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ event: eventName, visitorId })
-        });
+        const { error } = await supabase
+            .from('events')
+            .insert([
+                {
+                    event_name: eventName,
+                    visitor_id: visitorId
+                }
+            ]);
+
+        if (error) {
+            console.error('Supabase Events Error:', error);
+            // Optionally retry or fallback
+        }
     } catch (e) {
         console.error('Failed to send tracking event', e);
     }
@@ -31,11 +42,18 @@ export const submitLead = async (email: string) => {
     console.log(`[PIXEL] Lead: ${email}`);
 
     try {
-        await fetch('/api/lead', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, visitorId })
-        });
+        const { error } = await supabase
+            .from('leads')
+            .insert([
+                {
+                    email: email,
+                    visitor_id: visitorId
+                }
+            ]);
+
+        if (error) {
+            console.error('Supabase Leads Error:', error);
+        }
     } catch (e) {
         console.error('Failed to submit lead', e);
     }
