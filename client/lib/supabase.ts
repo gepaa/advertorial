@@ -5,7 +5,9 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-    console.warn("Supabase credentials missing in environment variables (VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY)");
+    console.warn("Supabase credentials missing. Pixel tracking disabled.");
 }
 
-export const supabase = createClient(supabaseUrl || '', supabaseKey || '');
+export const supabase = (supabaseUrl && supabaseKey)
+    ? createClient(supabaseUrl, supabaseKey)
+    : null;

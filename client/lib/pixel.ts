@@ -17,6 +17,8 @@ export const trackEvent = async (eventName: string) => {
     console.log(`[PIXEL] Event: ${eventName} | Visitor: ${visitorId}`);
 
     try {
+        if (!supabase) return;
+
         const { error } = await supabase
             .from('events')
             .insert([
@@ -42,6 +44,8 @@ export const submitLead = async (email: string) => {
     console.log(`[PIXEL] Lead: ${email}`);
 
     try {
+        if (!supabase) return;
+
         const { error } = await supabase
             .from('leads')
             .insert([
